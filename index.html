@@ -60,6 +60,35 @@
                 max-width: 1024px;
                 margin: auto;
             }
+
+
+            .helloText {
+                
+                }
+
+                .helloText p {
+                text-align: left;
+                background: #fff;
+                color: #000;
+                padding: 10px;
+                }
+
+                .helloText .cursor {
+                display: inline-block;
+                height: 40px;
+                width: 2px;
+                background: #aaa;
+                vertical-align: middle;
+                animation: 1s blink linear infinite;
+                }
+                @keyframes blink {
+                        0%,49% {
+                            opacity: 0;
+                    }
+                        50%,100% {
+                            opacity: 1;
+                    }
+                }            
         </style>
     </head>
     <body>
@@ -73,14 +102,38 @@
                 </div>
                 <div class="col m12" style="font-size: 36px; font-weight: 500; color: black;">
                     <br>
-                    Hello, my name is Ionel,<br>
-                    I am a front-end / back-end web developer<br>
-                    with over 20 years of experience.
-                    <br><br>
+                    <div class="helloText">
+                        <p>
+                          Hello, my name is Ionel<br> I am a <span id="message">front-end</span><span class="cursor"></span> web developer<br>with over 10 years of experience in the field.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="content">
+            <div class="row">
+                <div class="col m12">
+                    <h1 style="font-size: 32px; font-weight: 600; letter-spacing: normal; margin: 0;">Projects</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m4">
+                    <img src="template/images/projects/Bulgarasu.ro.png" style="width: 100%; border-radius: 10px;">
+                    <br>
+                    <span style="font-size: 13px; font-weight: 400; border: 1px solid #CCC; padding: 1px 5px; border-radius: 5px;">HTML</span>
+                    <span style="font-size: 13px; font-weight: 400; border: 1px solid #CCC; padding: 1px 5px; border-radius: 5px;">CSS</span>
+                    <span style="font-size: 13px; font-weight: 400; border: 1px solid #CCC; padding: 1px 5px; border-radius: 5px;">JavaScript</span>
+                    <span style="font-size: 13px; font-weight: 400; border: 1px solid #CCC; padding: 1px 5px; border-radius: 5px;">PHP</span>
+                    <span style="font-size: 13px; font-weight: 400; border: 1px solid #CCC; padding: 1px 5px; border-radius: 5px;">MySQL</span>
+                </div>
+                <div class="col m4">
+                    <img src="template/images/projects/aboutfood.ro.png" style="width: 100%; border-radius: 10px;">
+                </div>
+                <div class="col m4">
+                    <img src="template/images/projects/DietEthic.ro.png" style="width: 100%; border-radius: 10px;">
+                </div>
+            </div>
+            
             <br>
             <div style="max-width:1024px; position: absolute;">
                 <div class="box">
@@ -96,6 +149,69 @@
                     <br><br>
                 </div>
             </div>
+            <br>
+            hmm...<br>
+            <script>
+                const mHTML = document.getElementById('message'),
+                skills = [
+                    'front-end',
+                    'back-end',
+                    'front-end / back-end',
+                    ];
+
+                let currentSkill = 0;
+                
+                function typeMessage() {
+
+                    if (!skills[currentSkill])
+                       currentSkill = 0;
+                    
+                    const currentStr = skills[currentSkill];
+
+                    currentStr.split();
+
+                    let part = '';
+                    let currentLetter = 0;
+
+                    let int1 = setInterval( () => {
+                        if (!currentStr[currentLetter]) {
+
+                            currentSkill++;
+                            
+                            if(currentSkill < 3) {
+                                setTimeout(()=>{
+                                    deleteMessage(part);
+                                }, 500); // Wait time until skill deletion
+                            }
+
+                            clearInterval(int1);
+                        } 
+                        else {
+                            part += currentStr[currentLetter++];
+                            mHTML.innerHTML = part;
+                        }
+                    }, 100);
+                }
+
+                function deleteMessage(str) {
+                    let int = setInterval( () => {
+                        if (str.length === 0) {
+                        setTimeout( () => {
+                            typeMessage();
+                        }, 1500); // Pause between skills
+
+                        clearInterval(int);
+                        } 
+                        else {
+                            str = str.split('');
+                            str.pop();
+                            str = str.join('');
+                            mHTML.innerHTML = str;
+                        }
+                    },5); // Speed of letter removal
+                }
+                typeMessage();
+            </script>
         </div>
     </body>
 </html>
