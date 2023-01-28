@@ -10,6 +10,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="template/js/inView.js"></script>
         <style type="text/css">
             body, html {
                 margin: 0px;
@@ -64,6 +66,7 @@
 
             .helloText {
                 color: inherit;
+                font-size: 48px;
                 }
 
                 .helloText p {
@@ -71,6 +74,7 @@
                 background: #fff;
                 color: #000;
                 padding: 10px 0px;
+                letter-spacing: -1px;
                 }
 
                 .helloText .cursor {
@@ -83,7 +87,14 @@
                 }
 
                 #message {
-                    color: #fd5000;
+                    color: #e4b423;
+                }
+
+                .final {
+                    color: #fd5000 !important;
+                    font-weight: 600;
+                    letter-spacing: 2px;
+                    transition: all 1s ease;
                 }
 
                 @keyframes blink {
@@ -145,6 +156,7 @@
         <div id="header">
             <div class="row">
                 <div class="col m10" style="font-weight: 400;">
+                    <img src="template/images/logo.png" style="float: left; padding-right: 40px;">
                     <span style="color:#fd5000; font-weight: 400;">About</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Projects
                 </div>
                 <div class="col m2 _alignRight"  style="font-weight: 400;">
@@ -154,7 +166,7 @@
                     <br>
                     <div class="helloText">
                         <p>
-                          Hello, my name is Ionel<br> I am a <span id="message"></span><span class="cursor">_</span> web developer,<br>with over 10 years of experience in the field.
+                          Hello, my name is Ionel<br> I am a <span id="message"></span><span class="cursor">_</span> web developer,<br>with over 15 years of experience in the field.
                         </p>
                     </div>
                 </div>
@@ -361,7 +373,10 @@
                                 setTimeout(()=>{
                                     deleteMessage(newString);
                                 }, 500); // Wait time until skill deletion
+                                
                             }
+                            if(currentSkill == 3) {
+                                document.getElementById("message").classList.add("final");                            }
                             clearInterval(int1);
                         } 
                         else {
@@ -391,6 +406,173 @@
 
                 setTimeout(typeMessage, 2000);
             </script>
+            <br>
+            <style type="text/css">
+                .skill {
+                    font-size: 15px;
+                    font-weight: 500;
+                }
+                .progress-bar {
+                width: 100%;
+                height: 20px;
+                border-radius: 5px;
+                overflow: hidden;
+                position: relative;
+                background-color: #e9ecef;
+                }
+
+                .progress-bar span {
+                height: 100%;
+                display: block;
+                width: 0;
+                color: rgb(255, 251, 251);
+                line-height: 20px;
+                position: absolute;
+                text-align: end;
+                padding-right: 5px;
+                font-size: 13px;
+                
+                }
+
+                .progress-html span {
+                background-color: #e56027;
+                }
+                .progress-css span {
+                background-color: #0393d9;
+                }
+                .progress-javascript span {
+                background-color: #e4b423;
+                }
+                .progress-php span {
+                background-color: #7175aa;
+                }
+                
+                .progress-mysql span {
+                background-color: #db6700;
+                }
+                .progress-jquery span {
+                    background-color:#1c2c38;
+                }
+
+                .progress-git span {
+                    background-color: #e44d30;
+                }
+
+                .progress-seo span {
+                    background-color: #74a51b;
+                }
+                
+            </style>
+            <div class="row">
+                <div class="col m6">
+                    <div class="skill">
+                        <div class="row">
+                            <div class="col m6 _noPadding">HTML - advanced</div>
+                            <div class="col m6 _alignRight _noPadding"></div>
+                            <div class="col m12 _noPadding">
+                                <div class="progress-bar progress-html">
+                                    <span data-progress="90"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col m6">
+                    <div class="skill">
+                        <div class="row">
+                            <div class="col m6 _noPadding">CSS - advanced</div>
+                            <div class="col m6 _alignRight _noPadding"></div>
+                            <div class="col m12 _noPadding">
+                                <div class="progress-bar progress-css">
+                                    <span data-progress="80"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col m6">
+                    <div class="skill">
+                        <div class="row">
+                            <div class="col m6 _noPadding">JavaScript - beginner</div>
+                            <div class="col m6 _alignRight _noPadding"></div>
+                            <div class="col m12 _noPadding">
+                                <div class="progress-bar progress-javascript">
+                                    <span data-progress="30"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col m6">
+                    <div class="skill">
+                        <div class="row">
+                            <div class="col m6 _noPadding">jQuery framework - beginner</div>
+                            <div class="col m6 _alignRight _noPadding"></div>
+                            <div class="col m12 _noPadding">
+                                <div class="progress-bar progress-jquery">
+                                    <span data-progress="30"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col m6">
+                    <div class="skill">
+                        <div class="row">
+                            <div class="col m6 _noPadding">PHP - advanced</div>
+                            <div class="col m6 _alignRight _noPadding"></div>
+                            <div class="col m12 _noPadding">
+                                <div class="progress-bar progress-php">
+                                    <span data-progress="65"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col m6">
+                    <div class="skill">
+                        <div class="row">
+                            <div class="col m6 _noPadding">MySQL - advanced</div>
+                            <div class="col m6 _alignRight _noPadding"></div>
+                            <div class="col m12 _noPadding">
+                                <div class="progress-bar progress-mysql">
+                                    <span data-progress="70"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col m6">
+                    <div class="skill">
+                        <div class="row">
+                            <div class="col m6 _noPadding">Git / GitHub - medium</div>
+                            <div class="col m6 _alignRight _noPadding"></div>
+                            <div class="col m12 _noPadding">
+                                <div class="progress-bar progress-git">
+                                    <span data-progress="40"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col m6">
+                    <div class="skill">
+                        <div class="row">
+                            <div class="col m6 _noPadding">SEO</div>
+                            <div class="col m6 _alignRight _noPadding"></div>
+                            <div class="col m12 _noPadding">
+                                <div class="progress-bar progress-seo">
+                                    <span data-progress="90"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="template/js/progressBarAnimation.js"></script>
+            <br><br><br><br><br>
+            <div class="_alignCenter" style="font-size: 14px; font-weight:500;">&copy; Ionel Olariu 2023<br>All rights reserved</div>
+            <br><br><br><br><br>
         </div>
     </body>
 </html>
