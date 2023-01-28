@@ -63,24 +63,29 @@
 
 
             .helloText {
-                
+                color: inherit;
                 }
 
                 .helloText p {
                 text-align: left;
                 background: #fff;
                 color: #000;
-                padding: 10px;
+                padding: 10px 0px;
                 }
 
                 .helloText .cursor {
                 display: inline-block;
-                height: 40px;
-                width: 2px;
+                height: 50px;
+                width: 0px;
                 background: #aaa;
                 vertical-align: middle;
                 animation: 1s blink linear infinite;
                 }
+
+                #message {
+                    color: #fd5000;
+                }
+
                 @keyframes blink {
                         0%,49% {
                             opacity: 0;
@@ -88,28 +93,77 @@
                         50%,100% {
                             opacity: 1;
                     }
-                }            
+                }
+                span.css::before {
+                    font-size: 13px; 
+                    font-weight: 400; 
+                    background-color: #0393d9;
+                    color: white;
+                    padding: 1px 5px; 
+                    border-radius: 5px;
+                    content: 'CSS';
+                }        
+                span.php::before {
+                    font-size: 13px; 
+                    font-weight: 400; 
+                    background-color: #7175aa;
+                    color: white;
+                    padding: 1px 5px; 
+                    border-radius: 5px;
+                    content: 'PHP';
+                }        
+                span.html::before {
+                    font-size: 13px; 
+                    font-weight: 400; 
+                    background-color: #e56027;
+                    color: white;
+                    padding: 1px 5px; 
+                    border-radius: 5px;
+                    content: 'HTML';
+                }        
+                span.javascript::before {
+                    font-size: 13px; 
+                    font-weight: 400; 
+                    background-color: #e4b423;
+                    color: white;
+                    padding: 1px 5px; 
+                    border-radius: 5px;
+                    content: 'JavaScript';
+                }        
+                span.mysql::before {
+                    font-size: 13px; 
+                    font-weight: 400; 
+                    background-color: #db6700;
+                    color: white;
+                    padding: 1px 5px; 
+                    border-radius: 5px;
+                    content: 'MySQL';
+                }        
         </style>
     </head>
     <body>
         <div id="header">
             <div class="row">
-                <div class="col m10">
-                    <span style="color:black">Home</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Projects &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; About
+                <div class="col m10" style="font-weight: 400;">
+                    <span style="color:#fd5000; font-weight: 400;">About</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Projects
                 </div>
-                <div class="col m2 _alignRight">
+                <div class="col m2 _alignRight"  style="font-weight: 400;">
                     Contact
                 </div>
                 <div class="col m12" style="font-size: 36px; font-weight: 500; color: black;">
                     <br>
                     <div class="helloText">
                         <p>
-                          Hello, my name is Ionel<br> I am a <span id="message">front-end</span><span class="cursor"></span> web developer<br>with over 10 years of experience in the field.
+                          Hello, my name is Ionel<br> I am a <span id="message"></span><span class="cursor">_</span> web developer,<br>with over 10 years of experience in the field.
                         </p>
                     </div>
                 </div>
+               <div class="col m12">
+                I currently use the LAMP stack: JavaScript - Linux - Apache - MySQL - PHP. 
+               </div> 
             </div>
         </div>
+
         <div class="content">
             <div class="row">
                 <div class="col m12">
@@ -118,24 +172,152 @@
             </div>
             <div class="row">
                 <div class="col m4">
-                    <img src="template/images/projects/Bulgarasu.ro.png" style="width: 100%; border-radius: 10px;">
+                    <img src="template/images/projects/Bulgarasu.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
                     <br>
-                    <span style="font-size: 13px; font-weight: 400; border: 1px solid #CCC; padding: 1px 5px; border-radius: 5px;">HTML</span>
-                    <span style="font-size: 13px; font-weight: 400; border: 1px solid #CCC; padding: 1px 5px; border-radius: 5px;">CSS</span>
-                    <span style="font-size: 13px; font-weight: 400; border: 1px solid #CCC; padding: 1px 5px; border-radius: 5px;">JavaScript</span>
-                    <span style="font-size: 13px; font-weight: 400; border: 1px solid #CCC; padding: 1px 5px; border-radius: 5px;">PHP</span>
-                    <span style="font-size: 13px; font-weight: 400; border: 1px solid #CCC; padding: 1px 5px; border-radius: 5px;">MySQL</span>
+                    Stack:<br>
+                    <span class="html"></span>
+                    <span class="css"></span>
+                    <span class="javascript"></span>
+                    <span class="php"></span>
+                    <span class="mysql"></span>
                 </div>
                 <div class="col m4">
-                    <img src="template/images/projects/aboutfood.ro.png" style="width: 100%; border-radius: 10px;">
+                    <img src="template/images/projects/aboutfood.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
+                    <br>
+                    Stack:<br>
+                    <span class="css"></span>
+                    <span class="php"></span>
+                    <span class="html"></span>
+                    <span class="javascript"></span>
+                    <span class="mysql"></span>
                 </div>
                 <div class="col m4">
-                    <img src="template/images/projects/DietEthic.ro.png" style="width: 100%; border-radius: 10px;">
+                    <img src="template/images/projects/DietEthic.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
+                    <br>
+                    Stack:<br>
+                    <span class="css"></span>
+                    <span class="php"></span>
+                    <span class="html"></span>
+                    <span class="javascript"></span>
+                </div>
+                <div class="col m12"><br></div>
+                <div class="col m4">
+                    <img src="template/images/projects/Aalr.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
+                    <br>
+                    Stack:<br>
+                    <span class="css"></span>
+                    <span class="php"></span>
+                    <span class="html"></span>
+                    <span class="javascript"></span>
+                </div>
+                <div class="col m4">
+                    <img src="template/images/projects/Blueskystudios.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
+                    <br>
+                    Stack:<br>
+                    <span class="css"></span>
+                    <span class="php"></span>
+                    <span class="html"></span>
+                    <span class="javascript"></span>
+                </div>
+                <div class="col m4">
+                    <img src="template/images/projects/Blumprod.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
+                    <br>
+                    Stack:<br>
+                    <span class="css"></span>
+                    <span class="php"></span>
+                    <span class="html"></span>
+                    <span class="javascript"></span>
+                </div>
+                <div class="col m12"><br></div>
+                <div class="col m4">
+                    <img src="template/images/projects/HunterVipReghin.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
+                    <br>
+                    Stack:<br>
+                    <span class="css"></span>
+                    <span class="php"></span>
+                    <span class="html"></span>
+                    <span class="javascript"></span>
+                </div>
+                <div class="col m4">
+                    <img src="template/images/projects/IncaltamintePiele.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
+                    <br>
+                    Stack:<br>
+                    <span class="css"></span>
+                    <span class="php"></span>
+                    <span class="html"></span>
+                    <span class="javascript"></span>
+                </div>
+                <div class="col m4">
+                    <img src="template/images/projects/Pansab.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
+                    <br>
+                    Stack:<br>
+                    <span class="css"></span>
+                    <span class="php"></span>
+                    <span class="html"></span>
+                    <span class="javascript"></span>
+                </div>
+                <div class="col m12"><br></div>
+                <div class="col m4">
+                    <img src="template/images/projects/Pro-Sano.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
+                    <br>
+                    Stack:<br>
+                    <span class="css"></span>
+                    <span class="php"></span>
+                    <span class="html"></span>
+                    <span class="javascript"></span>
+                </div>
+                <div class="col m4">
+                    <img src="template/images/projects/MagicTravel.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
+                    <br>
+                    Stack:<br>
+                    <span class="css"></span>
+                    <span class="php"></span>
+                    <span class="html"></span>
+                    <span class="javascript"></span>
+                </div>
+                <div class="col m4">
+                    <img src="template/images/projects/MareAurelian.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
+                    <br>
+                    Stack:<br>
+                    <span class="css"></span>
+                    <span class="php"></span>
+                    <span class="html"></span>
+                    <span class="javascript"></span>
+                </div>
+                <div class="col m12"><br></div>
+                <div class="col m4">
+                    <img src="template/images/projects/JailbreakWizard.net.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
+                    <br>
+                    Stack:<br>
+                    <span class="css"></span>
+                    <span class="php"></span>
+                    <span class="html"></span>
+                    <span class="javascript"></span>
+                </div>
+                <div class="col m4">
+                    <img src="template/images/projects/Jailbreak-me.info.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
+                    <br>
+                    Stack:<br>
+                    <span class="css"></span>
+                    <span class="php"></span>
+                    <span class="html"></span>
+                    <span class="javascript"></span>
+                </div>
+                <div class="col m4">
+                    <img src="template/images/projects/BibliotecaReghin.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
+                    <br>
+                    Stack:<br>
+                    <span class="css"></span>
+                    <span class="php"></span>
+                    <span class="html"></span>
+                    <span class="javascript"></span>
                 </div>
             </div>
-            
+            <br><br>
             <br>
-            <div style="max-width:1024px; position: absolute;">
+            <h1 style="font-size: 32px; font-weight: 600; letter-spacing: normal; margin: 0;">Education</h1>
+            <br>
+            <div style="max-width:1024px; position: relative;">
                 <div class="box">
                     <p>Cool as fuck.</p>
                     <br>
@@ -152,43 +334,39 @@
             <br>
             hmm...<br>
             <script>
-                const mHTML = document.getElementById('message'),
+                const textString = document.getElementById('message'),
                 skills = [
                     'front-end',
                     'back-end',
-                    'front-end / back-end',
+                    'full stack',
                     ];
 
                 let currentSkill = 0;
                 
                 function typeMessage() {
-
                     if (!skills[currentSkill])
                        currentSkill = 0;
                     
-                    const currentStr = skills[currentSkill];
-
-                    currentStr.split();
-
-                    let part = '';
+                    const currentString = skills[currentSkill];
+                    currentString.split();
+                    let newString = '';
                     let currentLetter = 0;
 
                     let int1 = setInterval( () => {
-                        if (!currentStr[currentLetter]) {
+                        if (!currentString[currentLetter]) {
 
                             currentSkill++;
                             
                             if(currentSkill < 3) {
                                 setTimeout(()=>{
-                                    deleteMessage(part);
+                                    deleteMessage(newString);
                                 }, 500); // Wait time until skill deletion
                             }
-
                             clearInterval(int1);
                         } 
                         else {
-                            part += currentStr[currentLetter++];
-                            mHTML.innerHTML = part;
+                            newString += currentString[currentLetter++];
+                            textString.innerHTML = newString;
                         }
                     }, 100);
                 }
@@ -206,11 +384,12 @@
                             str = str.split('');
                             str.pop();
                             str = str.join('');
-                            mHTML.innerHTML = str;
+                            textString.innerHTML = str;
                         }
-                    },5); // Speed of letter removal
+                    },50); // Speed of letter removal
                 }
-                typeMessage();
+
+                setTimeout(typeMessage, 2000);
             </script>
         </div>
     </body>
