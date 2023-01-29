@@ -1,0 +1,243 @@
+body, html {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    font-size: 19px;
+    font-weight: 300;
+    color: #333;
+}
+
+.box {
+    padding-left: 0px;
+    margin: auto;
+    margin-left: 16px;
+    border-left: 2px solid #fd5000;
+    padding-left: 20px;
+}
+
+.box::before {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #fd5000;
+    position: absolute;
+    content: " ";
+    border-radius: 50%;
+    background-color: #fff;
+    left: 10px;
+}
+.box p {
+    font-size: 18px;
+    margin: 0px;
+    position: absolute;
+    margin-top: -7px;
+    font-weight: 400;
+    color: #fd5000;
+}
+#header {
+    width: auto;
+}
+
+#header .row {
+    max-width: 1024px;
+    margin: auto;
+}
+
+.content {
+    max-width: 1024px;
+    margin: auto;
+}
+
+
+.helloText {
+    color: inherit;
+    font-size: 48px;
+}
+.helloText p {
+    text-align: left;
+    background: #fff;
+    color: #000;
+    padding: 10px 0px;
+    letter-spacing: -1px;
+    margin-bottom: 0px;
+}
+
+.helloText .cursor {
+    display: inline-block;
+    height: 80px;
+    width: 0px;
+    background: #aaa;
+    vertical-align: middle;
+    animation: 1s blink linear infinite;
+}
+    
+@media only screen and (max-width: 950px) { .helloText {font-size: 38px; } .helloText .cursor { height: 60px;} }
+
+@media only screen and (max-width: 745px) { .helloText {font-size: 32px; } .helloText .cursor { height: 50px;} }
+
+@media only screen and (max-width: 600px) { .helloText {font-size: 26px; } .helloText .cursor { height: 40px;} }
+
+
+
+#message {
+    color: #e4b423;
+}
+
+.final {
+    color: #fd5000 !important;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: all 1s ease;
+}
+
+@keyframes blink {
+        0%,49% {
+            opacity: 0;
+    }
+        50%,100% {
+            opacity: 1;
+    }
+}
+span.css::before {
+    font-size: 13px; 
+    font-weight: 400; 
+    background-color: #0393d9;
+    color: white;
+    padding: 1px 5px; 
+    border-radius: 5px;
+    content: 'CSS';
+}        
+span.php::before {
+    font-size: 13px; 
+    font-weight: 400; 
+    background-color: #7175aa;
+    color: white;
+    padding: 1px 5px; 
+    border-radius: 5px;
+    content: 'PHP';
+}        
+span.html::before {
+    font-size: 13px; 
+    font-weight: 400; 
+    background-color: #e56027;
+    color: white;
+    padding: 1px 5px; 
+    border-radius: 5px;
+    content: 'HTML';
+}        
+span.javascript::before {
+    font-size: 13px; 
+    font-weight: 400; 
+    background-color: #e4b423;
+    color: white;
+    padding: 1px 5px; 
+    border-radius: 5px;
+    content: 'JavaScript';
+}        
+span.mysql::before {
+    font-size: 13px; 
+    font-weight: 400; 
+    background-color: #db6700;
+    color: white;
+    padding: 1px 5px; 
+    border-radius: 5px;
+    content: 'MySQL';
+}        
+.moreBox {
+    display: none;
+}
+
+.moreBoxShow {
+    display: block;
+}
+
+#load-more {
+    width: 96%;
+    margin: auto;
+    margin-top: 30px;
+    display: block;
+    padding: 10px;
+    box-shadow:0 1px 31px rgba(0,0,0,.09);
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: #fd5000;
+    font-weight: 500;
+}
+
+blockquote {
+    font-size: 18px;
+    font-weight: 500;
+    border-left: 0px solid #fd5000;
+    padding: 0px;
+    color: #666;
+    font-style: italic;
+}
+
+
+/* Skills set styles */
+.skill {
+    font-size: 15px;
+    font-weight: 500;
+}
+.progress-bar {
+width: 100%;
+height: 20px;
+border-radius: 5px;
+overflow: hidden;
+position: relative;
+background-color: #e9ecef;
+}
+
+.progress-bar span {
+height: 100%;
+display: block;
+width: 0;
+color: rgb(255, 251, 251);
+line-height: 20px;
+position: absolute;
+text-align: end;
+padding-right: 5px;
+font-size: 13px;
+
+}
+
+.progress-html span {
+background-color: #e56027;
+}
+.progress-css span {
+background-color: #0393d9;
+}
+.progress-javascript span {
+background-color: #e4b423;
+}
+.progress-php span {
+background-color: #7175aa;
+}
+
+.progress-mysql span {
+background-color: #db6700;
+}
+.progress-jquery span {
+    background-color:#1c2c38;
+}
+
+.progress-git span {
+    background-color: #e44d30;
+}
+
+.progress-seo span {
+    background-color: #74a51b;
+}
+
+.progress-photoshop span {
+    background-color: #00c7f9;
+}
+
+.progress-vscode span {
+    background-color: #0076b8;
+}
+
+.progress-project-manager span {
+    background-color: #c400a3;
+}
