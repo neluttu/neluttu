@@ -5,7 +5,7 @@ $(window).scroll( function(){
         
         if( bottom_of_window > bottom_of_object ) {
             $(".skill .progress-bar span").each(function () {
-                    $(this).animate({width: $(this).attr("data-progress") + "%",},2000);
+                    $(this).animate({width: $(this).attr("data-progress") + "%",},1300);
                     $(this).text($(this).attr("data-progress") + "%");
                 });                
         }

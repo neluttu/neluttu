@@ -68,6 +68,12 @@
                 color: inherit;
                 font-size: 48px;
                 }
+                @media only screen and (max-width: 950px) { .helloText {font-size: 38px; } }
+
+                @media only screen and (max-width: 745px) { .helloText {font-size: 32px; } }
+            
+                @media only screen and (max-width: 600px) { .helloText {font-size: 26px; } }
+
 
                 .helloText p {
                 text-align: left;
@@ -75,6 +81,7 @@
                 color: #000;
                 padding: 10px 0px;
                 letter-spacing: -1px;
+                margin-bottom: 0px;
                 }
 
                 .helloText .cursor {
@@ -150,6 +157,35 @@
                     border-radius: 5px;
                     content: 'MySQL';
                 }        
+                .moreBox {
+                    display: none;
+                }
+
+                .moreBoxShow {
+                    display: block;
+                }
+
+                #load-more {
+                    width: 96%;
+                    margin: auto;
+                    margin-top: 30px;
+                    display: block;
+                    padding: 10px;
+                    box-shadow:0 1px 31px rgba(0,0,0,.09);
+                    text-transform: capitalize;
+                    cursor: pointer;
+                    text-align: center;
+                    color: #fd5000;
+                    font-weight: 500;
+                }
+
+                blockquote {
+                    font-size: 22px;
+                    font-weight: 500;
+                    border-left: 5px solid #fd5000;
+                    color: #666;
+                    font-style: italic;
+                }
         </style>
     </head>
     <body>
@@ -170,20 +206,22 @@
                         </p>
                     </div>
                 </div>
-               <div class="col m12">
-                I currently use the LAMP stack: JavaScript - Linux - Apache - MySQL - PHP. 
-               </div> 
+                <div class="col m12">
+                    <blockquote>
+                        Amateurs work until the can get it right. Professionals work until they can't get it wrong.
+                    </blockquote>
+                </div>
             </div>
         </div>
-
+        
         <div class="content">
             <div class="row">
                 <div class="col m12">
-                    <h1 style="font-size: 32px; font-weight: 600; letter-spacing: normal; margin: 0;">Projects</h1>
+                    <h1 style="font-size: 32px; font-weight: 600; letter-spacing: normal; margin: 0;">Some of my work</h1>
                 </div>
             </div>
-            <div class="row">
-                <div class="col m4">
+            <div class="row" id="projects">
+                <div class="col m6">
                     <img src="template/images/projects/Bulgarasu.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
                     <br>
                     Stack:<br>
@@ -193,7 +231,7 @@
                     <span class="php"></span>
                     <span class="mysql"></span>
                 </div>
-                <div class="col m4">
+                <div class="col m6">
                     <img src="template/images/projects/aboutfood.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
                     <br>
                     Stack:<br>
@@ -203,7 +241,7 @@
                     <span class="javascript"></span>
                     <span class="mysql"></span>
                 </div>
-                <div class="col m4">
+                <div class="col m6">
                     <img src="template/images/projects/DietEthic.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
                     <br>
                     Stack:<br>
@@ -212,8 +250,7 @@
                     <span class="html"></span>
                     <span class="javascript"></span>
                 </div>
-                <div class="col m12"><br></div>
-                <div class="col m4">
+                <div class="col m6">
                     <img src="template/images/projects/Aalr.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
                     <br>
                     Stack:<br>
@@ -222,7 +259,7 @@
                     <span class="html"></span>
                     <span class="javascript"></span>
                 </div>
-                <div class="col m4">
+                <div class="col m6 moreBox">
                     <img src="template/images/projects/Blueskystudios.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
                     <br>
                     Stack:<br>
@@ -231,7 +268,7 @@
                     <span class="html"></span>
                     <span class="javascript"></span>
                 </div>
-                <div class="col m4">
+                <div class="col m6 moreBox">
                     <img src="template/images/projects/Blumprod.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
                     <br>
                     Stack:<br>
@@ -240,8 +277,7 @@
                     <span class="html"></span>
                     <span class="javascript"></span>
                 </div>
-                <div class="col m12"><br></div>
-                <div class="col m4">
+                <div class="col m6 moreBox">
                     <img src="template/images/projects/HunterVipReghin.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
                     <br>
                     Stack:<br>
@@ -250,7 +286,7 @@
                     <span class="html"></span>
                     <span class="javascript"></span>
                 </div>
-                <div class="col m4">
+                <div class="col m6 moreBox">
                     <img src="template/images/projects/IncaltamintePiele.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
                     <br>
                     Stack:<br>
@@ -259,7 +295,7 @@
                     <span class="html"></span>
                     <span class="javascript"></span>
                 </div>
-                <div class="col m4">
+                <div class="col m6 moreBox">
                     <img src="template/images/projects/Pansab.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
                     <br>
                     Stack:<br>
@@ -268,8 +304,7 @@
                     <span class="html"></span>
                     <span class="javascript"></span>
                 </div>
-                <div class="col m12"><br></div>
-                <div class="col m4">
+                <div class="col m6 moreBox">
                     <img src="template/images/projects/Pro-Sano.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
                     <br>
                     Stack:<br>
@@ -278,7 +313,7 @@
                     <span class="html"></span>
                     <span class="javascript"></span>
                 </div>
-                <div class="col m4">
+                <div class="col m6 moreBox">
                     <img src="template/images/projects/MagicTravel.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
                     <br>
                     Stack:<br>
@@ -287,7 +322,7 @@
                     <span class="html"></span>
                     <span class="javascript"></span>
                 </div>
-                <div class="col m4">
+                <div class="col m6 moreBox">
                     <img src="template/images/projects/MareAurelian.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
                     <br>
                     Stack:<br>
@@ -296,9 +331,8 @@
                     <span class="html"></span>
                     <span class="javascript"></span>
                 </div>
-                <div class="col m12"><br></div>
-                <div class="col m4">
-                    <img src="template/images/projects/JailbreakWizard.net.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
+                <div class="col m6 moreBox">
+                    <img src="template/images/projects/MareAurelian.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
                     <br>
                     Stack:<br>
                     <span class="css"></span>
@@ -306,8 +340,8 @@
                     <span class="html"></span>
                     <span class="javascript"></span>
                 </div>
-                <div class="col m4">
-                    <img src="template/images/projects/Jailbreak-me.info.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
+                <div class="col m6 moreBox">
+                    <img src="template/images/projects/MareAurelian.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
                     <br>
                     Stack:<br>
                     <span class="css"></span>
@@ -315,8 +349,8 @@
                     <span class="html"></span>
                     <span class="javascript"></span>
                 </div>
-                <div class="col m4">
-                    <img src="template/images/projects/BibliotecaReghin.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
+                <div class="col m6 moreBox">
+                    <img src="template/images/projects/MareAurelian.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
                     <br>
                     Stack:<br>
                     <span class="css"></span>
@@ -324,7 +358,11 @@
                     <span class="html"></span>
                     <span class="javascript"></span>
                 </div>
+
             </div>
+            <div id="load-more">load more projects</div>
+            <script src="template/js/showProjects.js"></script>
+                                
             <br><br>
             <br>
             <h1 style="font-size: 32px; font-weight: 600; letter-spacing: normal; margin: 0;">Education</h1>
@@ -344,7 +382,7 @@
                 </div>
             </div>
             <br>
-            hmm...<br>
+            <br>
             <script>
                 const textString = document.getElementById('message'),
                 skills = [
@@ -461,14 +499,27 @@
                 .progress-seo span {
                     background-color: #74a51b;
                 }
+
+                .progress-photoshop span {
+                    background-color: #00c7f9;
+                }
+
+                .progress-vscode span {
+                    background-color: #0076b8;
+                }
+                
+                .progress-project-manager span {
+                    background-color: #c400a3;
+                }
                 
             </style>
+            <h1 style="font-size: 32px; font-weight: 600; letter-spacing: normal; margin: 0;">Knowledge base</h1>
+            <br>
             <div class="row">
                 <div class="col m6">
                     <div class="skill">
                         <div class="row">
-                            <div class="col m6 _noPadding">HTML - advanced</div>
-                            <div class="col m6 _alignRight _noPadding"></div>
+                            <div class="col m12 _noPadding">HTML - advanced</div>
                             <div class="col m12 _noPadding">
                                 <div class="progress-bar progress-html">
                                     <span data-progress="90"></span>
@@ -480,8 +531,7 @@
                 <div class="col m6">
                     <div class="skill">
                         <div class="row">
-                            <div class="col m6 _noPadding">CSS - advanced</div>
-                            <div class="col m6 _alignRight _noPadding"></div>
+                            <div class="col m12 _noPadding">CSS - advanced</div>
                             <div class="col m12 _noPadding">
                                 <div class="progress-bar progress-css">
                                     <span data-progress="80"></span>
@@ -493,8 +543,7 @@
                 <div class="col m6">
                     <div class="skill">
                         <div class="row">
-                            <div class="col m6 _noPadding">JavaScript - beginner</div>
-                            <div class="col m6 _alignRight _noPadding"></div>
+                            <div class="col m12 _noPadding">JavaScript - beginner</div>
                             <div class="col m12 _noPadding">
                                 <div class="progress-bar progress-javascript">
                                     <span data-progress="30"></span>
@@ -506,8 +555,7 @@
                 <div class="col m6">
                     <div class="skill">
                         <div class="row">
-                            <div class="col m6 _noPadding">jQuery framework - beginner</div>
-                            <div class="col m6 _alignRight _noPadding"></div>
+                            <div class="col m12 _noPadding">jQuery framework - beginner</div>
                             <div class="col m12 _noPadding">
                                 <div class="progress-bar progress-jquery">
                                     <span data-progress="30"></span>
@@ -519,8 +567,7 @@
                 <div class="col m6">
                     <div class="skill">
                         <div class="row">
-                            <div class="col m6 _noPadding">PHP - advanced</div>
-                            <div class="col m6 _alignRight _noPadding"></div>
+                            <div class="col m12 _noPadding">PHP - advanced</div>
                             <div class="col m12 _noPadding">
                                 <div class="progress-bar progress-php">
                                     <span data-progress="65"></span>
@@ -532,8 +579,7 @@
                 <div class="col m6">
                     <div class="skill">
                         <div class="row">
-                            <div class="col m6 _noPadding">MySQL - advanced</div>
-                            <div class="col m6 _alignRight _noPadding"></div>
+                            <div class="col m12 _noPadding">MySQL - advanced</div>
                             <div class="col m12 _noPadding">
                                 <div class="progress-bar progress-mysql">
                                     <span data-progress="70"></span>
@@ -545,8 +591,7 @@
                 <div class="col m6">
                     <div class="skill">
                         <div class="row">
-                            <div class="col m6 _noPadding">Git / GitHub - medium</div>
-                            <div class="col m6 _alignRight _noPadding"></div>
+                            <div class="col m12 _noPadding">Git / GitHub - medium</div>
                             <div class="col m12 _noPadding">
                                 <div class="progress-bar progress-git">
                                     <span data-progress="40"></span>
@@ -558,8 +603,7 @@
                 <div class="col m6">
                     <div class="skill">
                         <div class="row">
-                            <div class="col m6 _noPadding">SEO</div>
-                            <div class="col m6 _alignRight _noPadding"></div>
+                            <div class="col m12 _noPadding">SEO</div>
                             <div class="col m12 _noPadding">
                                 <div class="progress-bar progress-seo">
                                     <span data-progress="90"></span>
@@ -568,7 +612,55 @@
                         </div>
                     </div>
                 </div>
+                <div class="col m6">
+                    <div class="skill">
+                        <div class="row">
+                            <div class="col m12 _noPadding">Adobe Photoshop - know some stuff</div>
+                            <div class="col m12 _noPadding">
+                                <div class="progress-bar progress-photoshop">
+                                    <span data-progress="35"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col m6">
+                    <div class="skill">
+                        <div class="row">
+                            <div class="col m6 _noPadding">Visual Studio Code</div>
+                            <div class="col m6 _alignRight _noPadding"></div>
+                            <div class="col m12 _noPadding">
+                                <div class="progress-bar progress-vscode">
+                                    <span data-progress="55"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col m12">
+                    <div class="skill">
+                        <div class="row">
+                            <div class="col m6 _noPadding">Project manager</div>
+                            <div class="col m6 _alignRight _noPadding"></div>
+                            <div class="col m12 _noPadding">
+                                <div class="progress-bar progress-project-manager">
+                                    <span data-progress="70"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col m12">
+                    <br>
+                    <div style="box-shadow:0 1px 31px rgba(0,0,0,.09); width: 100%; background-color: white; padding: 10px 15px 30px; border-radius: 5px; font-family: Hack,monospace !important; font-size: 14px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle></g></svg>
+                        <br><br>
+                        Tags:<br><br>
+                        ubuntu, windows, macos, photoshop, vscode, total commander, ftp, ssh, vpn, samba, lamp stack, .htaccess, tld registrations, web hosting, cpanel, firefox, chrome, safari, tl browser, brave, edge, ios, pc hardware
+                    </div>
+                </div>
             </div>
+
             <script src="template/js/progressBarAnimation.js"></script>
             <br><br><br><br><br>
             <div class="_alignCenter" style="font-size: 14px; font-weight:500;">&copy; Ionel Olariu 2023<br>All rights reserved</div>
