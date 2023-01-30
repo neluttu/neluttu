@@ -41,7 +41,7 @@
                             position: relative;
                         }
 
-                        #menu div:first-of-type {
+                        #menu > div:first-of-type {
                             width: 100%; 
                             color: white; 
                             font-size: 15px; 
@@ -49,48 +49,50 @@
                             padding:20px; 
                             background-color: #fd5000;
                         }
-                        #menu div:nth-of-type(2) {
+                        #menu > div:nth-of-type(2) {
                             width: 96%; 
                             margin: auto; 
                             background-color: #EAEAEA; 
                             min-height: 12px; 
                             border-bottom-left-radius: 4px; 
                             border-bottom-right-radius: 4px;
+                            overflow: hidden;
                         }
 
-                        #menu a, #menu a:visited {
+                        #menu > div:first-of-type a, #menu > div:first-of-type a:visited {
                             color: #fff;
                             display: inline-block;
                             padding-right: 20px;
                             text-decoration: none;
-                            transition: all 0.4s ease;
                             font-size: 18px;
+                            transition: all 0.5s ease;
                         }
 
-                        #menu a:hover {
+                        #menu > div:first-of-type a:hover {
                             color: #661616;
                         }
 
                         #me {
                             display: block;
                             padding: 20px;
+                            border-bottom-left-radius: 4px; 
+                            border-bottom-right-radius: 4px;
                         }
                     </style>
                     <div id="menu">
                         <div>
-
                             <a href="index.html">about</a>
                             <a href="#">projects</a>
                             <a href="#">contact</a>
                         </div>
                         <div>
-                            <span id="me">asdasd</span>
+                            <div style="background-color: white; padding: 10px; width: 98%; margin: auto; margin-bottom: 10px;" id="me">asdasd</div>
                         </div>
                         <script>
                             $(document).ready(function() {
                                 $('#me').hide();
                                 $("#about").click(function() {
-                                    $('#me').slideToggle();                                    
+                                    $('#me').slideToggle();
                                 });
                             });                            
                         </script>
@@ -133,6 +135,7 @@
                     <blockquote>
                         Amateurs work until they get it right.<br>Professionals work until they can't get it wrong.
                     </blockquote>
+                    <br><br>
                 </div>
             </div>
         </div>
@@ -368,126 +371,175 @@
                     Over the years I developed various types of websites and online services <span style="font-family: 'Courier New', Courier, monospace; color: #fd5000; font-size:16px">['presentation_pages', 'content_management_systems', 'online_shops', 'interactive_websites', 'user_systems', 'personal_projects', 'personal_pages', 'business_pages', 'ad_campains'] </span>for my clients.
                 </div>
             </div>
-            <div class="row" id="projects">
-                <div class="col m6">
-                    <img src="template/images/projects/Bulgarasu.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
-                    <br>
-                    Stack:<br>
-                    <span class="html"></span>
-                    <span class="css"></span>
-                    <span class="javascript"></span>
-                    <span class="php"></span>
-                    <span class="mysql"></span>
-                    <br><br>
-                </div>
-                <div class="col m6">
-                    <img src="template/images/projects/aboutfood.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
-                    <br>
-                    Stack:<br>
-                    <span class="css"></span>
-                    <span class="php"></span>
-                    <span class="html"></span>
-                    <span class="javascript"></span>
-                    <span class="mysql"></span>
-                    <br><br>
-                </div>
-                <div class="col m6">
-                    <img src="template/images/projects/DietEthic.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
-                    <br>
-                    Stack:<br>
-                    <span class="css"></span>
-                    <span class="php"></span>
-                    <span class="html"></span>
-                    <span class="javascript"></span>
-                    <br><br>
-                </div>
-                <div class="col m6">
-                    <img src="template/images/projects/Aalr.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
-                    <br>
-                    Stack:<br>
-                    <span class="css"></span>
-                    <span class="php"></span>
-                    <span class="html"></span>
-                    <span class="javascript"></span>
-                    <br><br>
-                </div>
-                <div class="col m6 moreBox">
-                    <img src="template/images/projects/Blueskystudios.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
-                    <br>
-                    Stack:<br>
-                    <span class="css"></span>
-                    <span class="php"></span>
-                    <span class="html"></span>
-                    <span class="javascript"></span>
-                </div>
-                <div class="col m6 moreBox">
-                    <img src="template/images/projects/Blumprod.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
-                    <br>
-                    Stack:<br>
-                    <span class="css"></span>
-                    <span class="php"></span>
-                    <span class="html"></span>
-                    <span class="javascript"></span>
-                </div>
-                <div class="col m6 moreBox">
-                    <img src="template/images/projects/HunterVipReghin.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
-                    <br>
-                    Stack:<br>
-                    <span class="css"></span>
-                    <span class="php"></span>
-                    <span class="html"></span>
-                    <span class="javascript"></span>
-                </div>
-                <div class="col m6 moreBox">
-                    <img src="template/images/projects/IncaltamintePiele.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
-                    <br>
-                    Stack:<br>
-                    <span class="css"></span>
-                    <span class="php"></span>
-                    <span class="html"></span>
-                    <span class="javascript"></span>
-                </div>
-                <div class="col m6 moreBox">
-                    <img src="template/images/projects/Pansab.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
-                    <br>
-                    Stack:<br>
-                    <span class="css"></span>
-                    <span class="php"></span>
-                    <span class="html"></span>
-                    <span class="javascript"></span>
-                </div>
-                <div class="col m6 moreBox">
-                    <img src="template/images/projects/Pro-Sano.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
-                    <br>
-                    Stack:<br>
-                    <span class="css"></span>
-                    <span class="php"></span>
-                    <span class="html"></span>
-                    <span class="javascript"></span>
-                </div>
-                <div class="col m6 moreBox">
-                    <img src="template/images/projects/MagicTravel.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
-                    <br>
-                    Stack:<br>
-                    <span class="css"></span>
-                    <span class="php"></span>
-                    <span class="html"></span>
-                    <span class="javascript"></span>
-                </div>
-                <div class="col m6 moreBox">
-                    <img src="template/images/projects/MareAurelian.ro.png" style="width: 100%; border-radius: 5px; padding: 0px; border:1px solid #f1f1f1; box-shadow:0 1px 31px rgba(0,0,0,.09); ">
-                    <br>
-                    Stack:<br>
-                    <span class="css"></span>
-                    <span class="php"></span>
-                    <span class="html"></span>
-                    <span class="javascript"></span>
-                </div>
-            </div>
-            <div id="load-more">loadMoreProjects();</div>
-            <script src="template/js/showProjects.js"></script>
-                                
+
+                               
             <br><br>
+            <!-- begin portfolio -->
+            <div id="projects">
+                <div class="row">
+                    <div class="col m7">
+                        <b>Asociația Artiștilor Lutieri din România</b><br>
+                        <span style="font-size:16px; font-weight: 500; color: #666;">Design concept for a violin makers association, front-end and back-end. Members database with CMS for easy updates.</span>
+                    </div>
+                    <div class="col m5">
+                        <b>Used stack:</b><br>
+                        <span class="html"></span>
+                        <span class="css"></span>
+                        <span class="jquery"></span>
+                        <span class="javascript"></span>
+                        <span class="php"></span>
+                        <span class="mysql"></span>
+                        <span class="seo"></span>
+                    </div>
+                    <div class="col m12">
+                        <img src="template/images/projects/Aalr.ro.png" style="object-fit: cover; box-shadow:0 1px 31px rgba(0,0,0,.09); border-radius: 5px;">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m7">
+                        <b>Asociația Artiștilor Lutieri din România</b><br>
+                        <span style="font-size:16px; font-weight: 500; color: #666;">Design concept for a violin makers association, front-end and back-end. Members database with CMS for easy updates.</span>
+                    </div>
+                    <div class="col m5">
+                        <b>Used stack:</b><br>
+                        <span class="html"></span>
+                        <span class="css"></span>
+                        <span class="jquery"></span>
+                        <span class="javascript"></span>
+                        <span class="php"></span>
+                        <span class="mysql"></span>
+                        <span class="seo"></span>
+                    </div>
+                    <div class="col m12">
+                        <img src="template/images/projects/Blueskystudios.ro.png" style="object-fit: cover; box-shadow:0 1px 31px rgba(0,0,0,.09); border-radius: 5px;">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m7">
+                        <b>Asociația Artiștilor Lutieri din România</b><br>
+                        <span style="font-size:16px; font-weight: 500; color: #666;">Design concept for a violin makers association, front-end and back-end. Members database with CMS for easy updates.</span>
+                    </div>
+                    <div class="col m5">
+                        <b>Used stack:</b><br>
+                        <span class="html"></span>
+                        <span class="css"></span>
+                        <span class="jquery"></span>
+                        <span class="javascript"></span>
+                        <span class="php"></span>
+                        <span class="mysql"></span>
+                        <span class="seo"></span>
+                    </div>
+                    <div class="col m12">
+                        <img src="template/images/projects/Aalr.ro.png" style="object-fit: cover; box-shadow:0 1px 31px rgba(0,0,0,.09); border-radius: 5px;">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m7">
+                        <b>Asociația Artiștilor Lutieri din România</b><br>
+                        <span style="font-size:16px; font-weight: 500; color: #666;">Design concept for a violin makers association, front-end and back-end. Members database with CMS for easy updates.</span>
+                    </div>
+                    <div class="col m5">
+                        <b>Used stack:</b><br>
+                        <span class="html"></span>
+                        <span class="css"></span>
+                        <span class="jquery"></span>
+                        <span class="javascript"></span>
+                        <span class="php"></span>
+                        <span class="mysql"></span>
+                        <span class="seo"></span>
+                    </div>
+                    <div class="col m12">
+                        <img src="template/images/projects/Blueskystudios.ro.png" style="object-fit: cover; box-shadow:0 1px 31px rgba(0,0,0,.09); border-radius: 5px;">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row moreBox">
+                    <div class="col m7">
+                        <b>Asociația Artiștilor Lutieri din România</b><br>
+                        <span style="font-size:16px; font-weight: 500; color: #666;">Design concept for a violin makers association, front-end and back-end. Members database with CMS for easy updates.</span>
+                    </div>
+                    <div class="col m5">
+                        <b>Used stack:</b><br>
+                        <span class="html"></span>
+                        <span class="css"></span>
+                        <span class="jquery"></span>
+                        <span class="javascript"></span>
+                        <span class="php"></span>
+                        <span class="mysql"></span>
+                        <span class="seo"></span>
+                    </div>
+                    <div class="col m12">
+                        <img src="template/images/projects/Aalr.ro.png" style="object-fit: cover; box-shadow:0 1px 31px rgba(0,0,0,.09); border-radius: 5px;">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row moreBox">
+                    <div class="col m7">
+                        <b>Asociația Artiștilor Lutieri din România</b><br>
+                        <span style="font-size:16px; font-weight: 500; color: #666;">Design concept for a violin makers association, front-end and back-end. Members database with CMS for easy updates.</span>
+                    </div>
+                    <div class="col m5">
+                        <b>Used stack:</b><br>
+                        <span class="html"></span>
+                        <span class="css"></span>
+                        <span class="jquery"></span>
+                        <span class="javascript"></span>
+                        <span class="php"></span>
+                        <span class="mysql"></span>
+                        <span class="seo"></span>
+                    </div>
+                    <div class="col m12">
+                        <img src="template/images/projects/Blueskystudios.ro.png" style="object-fit: cover; box-shadow:0 1px 31px rgba(0,0,0,.09); border-radius: 5px;">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row moreBox">
+                    <div class="col m7">
+                        <b>Asociația Artiștilor Lutieri din România</b><br>
+                        <span style="font-size:16px; font-weight: 500; color: #666;">Design concept for a violin makers association, front-end and back-end. Members database with CMS for easy updates.</span>
+                    </div>
+                    <div class="col m5">
+                        <b>Used stack:</b><br>
+                        <span class="html"></span>
+                        <span class="css"></span>
+                        <span class="jquery"></span>
+                        <span class="javascript"></span>
+                        <span class="php"></span>
+                        <span class="mysql"></span>
+                        <span class="seo"></span>
+                    </div>
+                    <div class="col m12">
+                        <img src="template/images/projects/Aalr.ro.png" style="object-fit: cover; box-shadow:0 1px 31px rgba(0,0,0,.09); border-radius: 5px;">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row moreBox">
+                    <div class="col m7">
+                        <b>Asociația Artiștilor Lutieri din România</b><br>
+                        <span style="font-size:16px; font-weight: 500; color: #666;">Design concept for a violin makers association, front-end and back-end. Members database with CMS for easy updates.</span>
+                    </div>
+                    <div class="col m5">
+                        <b>Used stack:</b><br>
+                        <span class="html"></span>
+                        <span class="css"></span>
+                        <span class="jquery"></span>
+                        <span class="javascript"></span>
+                        <span class="php"></span>
+                        <span class="mysql"></span>
+                    </div>
+                    <div class="col m12">
+                        <img src="template/images/projects/Blueskystudios.ro.png" style="object-fit: cover; box-shadow:0 1px 31px rgba(0,0,0,.09); border-radius: 5px;">
+                        <hr>
+                    </div>
+                </div>
+                <div id="load-more">loadMoreProjects();</div>
+                <script src="template/js/showProjects.js"></script>
+    
+            </div>
+            <!-- end portfolio -->
             <br>
             <br><br><br><br><br>
             <div class="_alignCenter" style="font-size: 14px; font-weight:500;">&copy; Ionel Olariu <script>document.write(new Date().getFullYear())</script>

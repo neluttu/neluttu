@@ -1,0 +1,508 @@
+<div id="header">
+    <div class="row">
+        <div class="col m12" style="font-weight: 400;">
+            <style type="text/css">
+                #menu {
+                    position: relative;
+                }
+
+                #menu > div:first-of-type {
+                    width: 100%; 
+                    color: white; 
+                    font-size: 15px; 
+                    border-radius: 4px; 
+                    padding:20px; 
+                    background-color: #fd5000;
+                }
+                #menu > div:nth-of-type(2) {
+                    width: 96%; 
+                    margin: auto; 
+                    background-color: #EAEAEA; 
+                    min-height: 12px; 
+                    border-bottom-left-radius: 4px; 
+                    border-bottom-right-radius: 4px;
+                    overflow: hidden;
+                }
+
+                #menu > div:first-of-type a, #menu > div:first-of-type a:visited {
+                    color: #fff;
+                    display: inline-block;
+                    padding-right: 20px;
+                    text-decoration: none;
+                    font-size: 18px;
+                    transition: all 0.5s ease;
+                }
+
+                #menu > div:first-of-type a:hover {
+                    color: #661616;
+                }
+
+                #me {
+                    display: block;
+                    padding: 20px;
+                    border-bottom-left-radius: 4px; 
+                    border-bottom-right-radius: 4px;
+                }
+            </style>
+            <div id="menu">
+                <div>
+                    <a href="index.html">about</a>
+                    <a href="#">projects</a>
+                    <a href="#">contact</a>
+                </div>
+                <div>
+                    <div style="background-color: white; padding: 10px; width: 98%; margin: auto; margin-bottom: 10px;" id="me">asdasd</div>
+                </div>
+                <script>
+                    $(document).ready(function() {
+                        $('#me').hide();
+                        $("#about").click(function() {
+                            $('#me').slideToggle();
+                        });
+                    });                            
+                </script>
+            </div>
+            <br>
+            <a href="https://www.linkedin.com/in/ionel-olariu-b468a7106/" target="_blank" title="LinkedIn Profile Ionel Olariu"><svg xmlns="http://www.w3.org/2000/svg" style="float: right; margin-right:10px;" class="icon icon-tabler icon-tabler-brand-linkedin" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd5000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <rect x="4" y="4" width="16" height="16" rx="2" />
+                <line x1="8" y1="11" x2="8" y2="16" />
+                <line x1="8" y1="8" x2="8" y2="8.01" />
+                <line x1="12" y1="16" x2="12" y2="11" />
+                <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+              </svg>
+            </a>
+            <a href="https://www.github.com/neluttu/" target="_blank" title="GitHub Neluttu"><svg xmlns="http://www.w3.org/2000/svg" style="float: right; margin-right:10px" class="icon icon-tabler icon-tabler-brand-github" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd5000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+              </svg>
+            </a>
+            <svg id="about" xmlns="http://www.w3.org/2000/svg"  style="float: right; margin-right:10px; cursor:pointer" class="icon icon-tabler icon-tabler-at" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd5000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <circle cx="12" cy="12" r="4" />
+                <path d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28" />
+            </svg>
+            <a href="https://www.twitter.com/neluttu/" target="_blank" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg"  style="float: right; margin-right:10px" class="icon icon-tabler icon-tabler-brand-twitter" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd5000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+            </svg>
+            </a>
+        </div>
+        <div class="col m12" style="font-size: 36px; font-weight: 500; color: black;">
+            <div class="helloText">
+                <p>
+                  Hello, my name is Ionel<br> I am a <span id="message"></span><span class="cursor">_</span> web developer,<br>with over 15 years of experience in the field.
+                </p>
+                <script src="template/js/replaceText.js"></script>
+            </div>
+        </div>
+        <div class="col m12 _alignRight">
+            <blockquote>
+                Amateurs work until they get it right.<br>Professionals work until they can't get it wrong.
+            </blockquote>
+            <br><br>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="row">
+        <div class="col m6">
+            <h1 style="font-size: 32px; font-weight: 600; letter-spacing: normal; margin: 0;">Employment</h1>
+            <br>
+            <div style="max-width:1024px; position: relative;">
+                <div class="box">
+                    <p>S.C. Bluesky Studios S.R.L., Reghin, Romania</p>
+                    <br><br>
+                    Fullstack developer | LAMP stack
+                    <br>
+                    2006 — present
+                    <br><br>
+                </div>
+                <div class="box">
+                    <p>S.C. Dreamland Studios S.R.L., Reghin, Romania</p>
+                    <br><br>
+                    Graphics designer<br>
+                    2003 - 2006
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="col m6">
+            <h1 style="font-size: 32px; font-weight: 600; letter-spacing: normal; margin: 0;">Education</h1>
+            <br>
+            <div style="max-width:1024px; position: relative;">
+                <div class="box">
+                    <p>Bachelor's degree, Universitatea „Hyperion” Bucharest, Romania</p>
+                    <br><br>
+                    Management
+                    <br>
+                    2004 — 2007
+                    <br><br>
+                </div>
+                <div class="box">
+                    <p>High school baccalaureate diploma, "Petru Maior" Reghin, Romania </p>
+                    <br><br>
+                    Humanities<br>
+                    1997 - 2001
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="col m6">
+            <h1 style="font-size: 32px; font-weight: 600; letter-spacing: normal; margin: 0;">Known Languages</h1>
+            <br>
+            <div style="position: relative;">
+                <div class="box">
+                    <p>Romanian - native</p>
+                    <br>
+                    Spoken: very good<br>
+                    Written: very good<br>
+                    <br>
+                </div>
+                <div class="box">
+                    <p>English</p>
+                    <br>
+                    Spoken: good<br>
+                    Written: very good<br><br>
+                </div>
+                <div class="box">
+                    <p>French</p>
+                    <br>
+                    Spoken: medium<br>
+                    Written: medium<br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col m12">
+            <h1 style="font-size: 32px; font-weight: 600; letter-spacing: normal; margin: 0;">Skill set</h1><br>
+            Actively working on improving my skill set, learning new stuff everyday. 
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col m6">
+            <div class="skill">
+                <div class="row">
+                    <div class="col m12 _noPadding">HTML - advanced</div>
+                    <div class="col m12 _noPadding">
+                        <div class="progress-bar progress-html">
+                            <span data-progress="90"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col m6">
+            <div class="skill">
+                <div class="row">
+                    <div class="col m12 _noPadding">CSS - advanced</div>
+                    <div class="col m12 _noPadding">
+                        <div class="progress-bar progress-css">
+                            <span data-progress="80"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col m6">
+            <div class="skill">
+                <div class="row">
+                    <div class="col m12 _noPadding">JavaScript - beginner</div>
+                    <div class="col m12 _noPadding">
+                        <div class="progress-bar progress-javascript">
+                            <span data-progress="30"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col m6">
+            <div class="skill">
+                <div class="row">
+                    <div class="col m12 _noPadding">jQuery framework - beginner</div>
+                    <div class="col m12 _noPadding">
+                        <div class="progress-bar progress-jquery">
+                            <span data-progress="30"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col m6">
+            <div class="skill">
+                <div class="row">
+                    <div class="col m12 _noPadding">PHP - advanced</div>
+                    <div class="col m12 _noPadding">
+                        <div class="progress-bar progress-php">
+                            <span data-progress="65"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col m6">
+            <div class="skill">
+                <div class="row">
+                    <div class="col m12 _noPadding">MySQL - advanced</div>
+                    <div class="col m12 _noPadding">
+                        <div class="progress-bar progress-mysql">
+                            <span data-progress="70"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col m6">
+            <div class="skill">
+                <div class="row">
+                    <div class="col m12 _noPadding">Git / GitHub - medium</div>
+                    <div class="col m12 _noPadding">
+                        <div class="progress-bar progress-git">
+                            <span data-progress="40"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col m6">
+            <div class="skill">
+                <div class="row">
+                    <div class="col m12 _noPadding">SEO</div>
+                    <div class="col m12 _noPadding">
+                        <div class="progress-bar progress-seo">
+                            <span data-progress="90"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col m6">
+            <div class="skill">
+                <div class="row">
+                    <div class="col m12 _noPadding">Adobe Photoshop - moderate</div>
+                    <div class="col m12 _noPadding">
+                        <div class="progress-bar progress-photoshop">
+                            <span data-progress="35"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col m6">
+            <div class="skill">
+                <div class="row">
+                    <div class="col m6 _noPadding">Visual Studio Code</div>
+                    <div class="col m6 _alignRight _noPadding"></div>
+                    <div class="col m12 _noPadding">
+                        <div class="progress-bar progress-vscode">
+                            <span data-progress="55"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col m12">
+            <div class="skill">
+                <div class="row">
+                    <div class="col m6 _noPadding">Project manager</div>
+                    <div class="col m6 _alignRight _noPadding"></div>
+                    <div class="col m12 _noPadding">
+                        <div class="progress-bar progress-project-manager">
+                            <span data-progress="70"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col m12">
+            <br>
+            <div style="box-shadow:0 1px 31px rgba(0,0,0,.09); width: 100%; background-color: white; padding: 10px 15px 30px; border-radius: 5px; font-family: Hack,monospace !important; font-size: 14px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle></g></svg>
+                <br><br>
+                Tags:<br><br>
+                ubuntu, windows, macos, photoshop, vscode, total commander, ftp, ssh, vpn, samba, lamp stack, .htaccess, tld registrations, web hosting, cpanel, firefox, chrome, safari, tl browser, brave, edge, ios, pc hardware
+            </div>
+        </div>
+    </div>
+    <script src="template/js/progressBarAnimation.js"></script>
+    <br><br>
+
+    <div class="row">
+        <div class="col m12">
+            <h1 style="font-size: 32px; font-weight: 600; letter-spacing: normal; margin: 0;">Projects</h1><br>
+            Over the years I developed various types of websites and online services <span style="font-family: 'Courier New', Courier, monospace; color: #fd5000; font-size:16px">['presentation_pages', 'content_management_systems', 'online_shops', 'interactive_websites', 'user_systems', 'personal_projects', 'personal_pages', 'business_pages', 'ad_campains'] </span>for my clients.
+        </div>
+    </div>
+
+                       
+    <br><br>
+    <!-- begin portfolio -->
+    <div id="projects">
+        <div class="row">
+            <div class="col m7">
+                <b>Asociația Artiștilor Lutieri din România</b><br>
+                <span style="font-size:16px; font-weight: 500; color: #666;">Design concept for a violin makers association, front-end and back-end. Members database with CMS for easy updates.</span>
+            </div>
+            <div class="col m5">
+                <b>Used stack:</b><br>
+                <span class="html"></span>
+                <span class="css"></span>
+                <span class="jquery"></span>
+                <span class="javascript"></span>
+                <span class="php"></span>
+                <span class="mysql"></span>
+                <span class="seo"></span>
+            </div>
+            <div class="col m12">
+                <img src="template/images/projects/Aalr.ro.png" style="object-fit: cover; box-shadow:0 1px 31px rgba(0,0,0,.09); border-radius: 15px; ">
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col m7">
+                <b>Asociația Artiștilor Lutieri din România</b><br>
+                <span style="font-size:16px; font-weight: 500; color: #666;">Design concept for a violin makers association, front-end and back-end. Members database with CMS for easy updates.</span>
+            </div>
+            <div class="col m5">
+                <b>Used stack:</b><br>
+                <span class="html"></span>
+                <span class="css"></span>
+                <span class="jquery"></span>
+                <span class="javascript"></span>
+                <span class="php"></span>
+                <span class="mysql"></span>
+                <span class="seo"></span>
+            </div>
+            <div class="col m12">
+                <img src="template/images/projects/Blueskystudios.ro.png" style="object-fit: cover; box-shadow:0 1px 31px rgba(0,0,0,.09); border-radius: 5px;">
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col m7">
+                <b>Asociația Artiștilor Lutieri din România</b><br>
+                <span style="font-size:16px; font-weight: 500; color: #666;">Design concept for a violin makers association, front-end and back-end. Members database with CMS for easy updates.</span>
+            </div>
+            <div class="col m5">
+                <b>Used stack:</b><br>
+                <span class="html"></span>
+                <span class="css"></span>
+                <span class="jquery"></span>
+                <span class="javascript"></span>
+                <span class="php"></span>
+                <span class="mysql"></span>
+                <span class="seo"></span>
+            </div>
+            <div class="col m12">
+                <img src="template/images/projects/Aalr.ro.png" style="object-fit: cover; box-shadow:0 1px 31px rgba(0,0,0,.09); border-radius: 5px;">
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col m7">
+                <b>Asociația Artiștilor Lutieri din România</b><br>
+                <span style="font-size:16px; font-weight: 500; color: #666;">Design concept for a violin makers association, front-end and back-end. Members database with CMS for easy updates.</span>
+            </div>
+            <div class="col m5">
+                <b>Used stack:</b><br>
+                <span class="html"></span>
+                <span class="css"></span>
+                <span class="jquery"></span>
+                <span class="javascript"></span>
+                <span class="php"></span>
+                <span class="mysql"></span>
+                <span class="seo"></span>
+            </div>
+            <div class="col m12">
+                <img src="template/images/projects/Blueskystudios.ro.png" style="object-fit: cover; box-shadow:0 1px 31px rgba(0,0,0,.09); border-radius: 5px;">
+                <hr>
+            </div>
+        </div>
+        <div class="row moreBox">
+            <div class="col m7">
+                <b>Asociația Artiștilor Lutieri din România</b><br>
+                <span style="font-size:16px; font-weight: 500; color: #666;">Design concept for a violin makers association, front-end and back-end. Members database with CMS for easy updates.</span>
+            </div>
+            <div class="col m5">
+                <b>Used stack:</b><br>
+                <span class="html"></span>
+                <span class="css"></span>
+                <span class="jquery"></span>
+                <span class="javascript"></span>
+                <span class="php"></span>
+                <span class="mysql"></span>
+                <span class="seo"></span>
+            </div>
+            <div class="col m12">
+                <img src="template/images/projects/Aalr.ro.png" style="object-fit: cover; box-shadow:0 1px 31px rgba(0,0,0,.09); border-radius: 5px;">
+                <hr>
+            </div>
+        </div>
+        <div class="row moreBox">
+            <div class="col m7">
+                <b>Asociația Artiștilor Lutieri din România</b><br>
+                <span style="font-size:16px; font-weight: 500; color: #666;">Design concept for a violin makers association, front-end and back-end. Members database with CMS for easy updates.</span>
+            </div>
+            <div class="col m5">
+                <b>Used stack:</b><br>
+                <span class="html"></span>
+                <span class="css"></span>
+                <span class="jquery"></span>
+                <span class="javascript"></span>
+                <span class="php"></span>
+                <span class="mysql"></span>
+                <span class="seo"></span>
+            </div>
+            <div class="col m12">
+                <img src="template/images/projects/Blueskystudios.ro.png" style="object-fit: cover; box-shadow:0 1px 31px rgba(0,0,0,.09); border-radius: 5px;">
+                <hr>
+            </div>
+        </div>
+        <div class="row moreBox">
+            <div class="col m7">
+                <b>Asociația Artiștilor Lutieri din România</b><br>
+                <span style="font-size:16px; font-weight: 500; color: #666;">Design concept for a violin makers association, front-end and back-end. Members database with CMS for easy updates.</span>
+            </div>
+            <div class="col m5">
+                <b>Used stack:</b><br>
+                <span class="html"></span>
+                <span class="css"></span>
+                <span class="jquery"></span>
+                <span class="javascript"></span>
+                <span class="php"></span>
+                <span class="mysql"></span>
+                <span class="seo"></span>
+            </div>
+            <div class="col m12">
+                <img src="template/images/projects/Aalr.ro.png" style="object-fit: cover; box-shadow:0 1px 31px rgba(0,0,0,.09); border-radius: 5px;">
+                <hr>
+            </div>
+        </div>
+        <div class="row moreBox">
+            <div class="col m7">
+                <b>Asociația Artiștilor Lutieri din România</b><br>
+                <span style="font-size:16px; font-weight: 500; color: #666;">Design concept for a violin makers association, front-end and back-end. Members database with CMS for easy updates.</span>
+            </div>
+            <div class="col m5">
+                <b>Used stack:</b><br>
+                <span class="html"></span>
+                <span class="css"></span>
+                <span class="jquery"></span>
+                <span class="javascript"></span>
+                <span class="php"></span>
+                <span class="mysql"></span>
+            </div>
+            <div class="col m12">
+                <img src="template/images/projects/Blueskystudios.ro.png" style="object-fit: cover; box-shadow:0 1px 31px rgba(0,0,0,.09); border-radius: 5px;">
+                <hr>
+            </div>
+        </div>
+        <div id="load-more">loadMoreProjects();</div>
+        <script src="template/js/showProjects.js"></script>
+
+    </div>
+    <!-- end portfolio -->
+    <br>

@@ -15,7 +15,7 @@ loadButton.onclick = () => {
             boxes[i].classList.toggle('moreBox');
     }
     
-    if(currentItem + itemStep > totalBoxes) {
+    if(currentItem + itemStep >= totalBoxes) {
         currentItem = currentItem + (totalBoxes - currentItem); // calculate remaining boxes
         loadButton.style.display = 'none'; // hide show more button
     }

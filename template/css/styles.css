@@ -103,7 +103,7 @@ span.css::before {
     font-weight: 400; 
     background-color: #0393d9;
     color: white;
-    padding: 1px 5px; 
+    padding: 3px 8px; 
     border-radius: 5px;
     content: 'CSS';
 }        
@@ -112,7 +112,7 @@ span.php::before {
     font-weight: 400; 
     background-color: #7175aa;
     color: white;
-    padding: 1px 5px; 
+    padding: 3px 8px; 
     border-radius: 5px;
     content: 'PHP';
 }        
@@ -121,7 +121,7 @@ span.html::before {
     font-weight: 400; 
     background-color: #e56027;
     color: white;
-    padding: 1px 5px; 
+    padding: 3px 8px; 
     border-radius: 5px;
     content: 'HTML';
 }        
@@ -130,7 +130,7 @@ span.javascript::before {
     font-weight: 400; 
     background-color: #e4b423;
     color: white;
-    padding: 1px 5px; 
+    padding: 3px 8px; 
     border-radius: 5px;
     content: 'JavaScript';
 }        
@@ -139,9 +139,27 @@ span.mysql::before {
     font-weight: 400; 
     background-color: #db6700;
     color: white;
-    padding: 1px 5px; 
+    padding: 3px 8px; 
     border-radius: 5px;
     content: 'MySQL';
+}        
+span.jquery::before {
+    font-size: 13px; 
+    font-weight: 400; 
+    background-color: #1f5b93;
+    color: white;
+    padding: 3px 8px; 
+    border-radius: 5px;
+    content: 'jQuery';
+}        
+span.seo::before {
+    font-size: 13px; 
+    font-weight: 400; 
+    background-color: #326364;
+    color: white;
+    padding: 3px 8px; 
+    border-radius: 5px;
+    content: 'SEO';
 }        
 .moreBox {
     display: none;
