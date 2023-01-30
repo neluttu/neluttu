@@ -44,6 +44,19 @@ $Projects = array(
                                             'mysql'
                                         )
                                     ),
+                'blumprod' => array(
+                            'title' => 'Blum Prod - thermoforming plastics',
+                            'description' => 'Concept and design for a thermoforming company. Presentation page, multilanguage suport and full SEO service.',
+                            'image' => 'Blumprod.ro.jpg',
+                            'url' => 'http://www.blumprod.ro/',
+                            'stack' => array(
+                                            'html',
+                                            'css',
+                                            'php',
+                                            'javascript',
+                                            'jquery'
+                                        )
+                                    ),
                 );
 print $Page;
 ?>
