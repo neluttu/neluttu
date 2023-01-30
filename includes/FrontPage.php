@@ -57,6 +57,30 @@ $Projects = array(
                                             'jquery'
                                         )
                                     ),
+                'blueskystudios' => array(
+                            'title' => 'Bluesky Studios S.R.L.',
+                            'description' => 'Simple one page presentation website for my company. No special effects there. ',
+                            'image' => 'Blueskystudios.ro.jpg',
+                            'url' => 'http://www.blueskystudios.ro/',
+                            'stack' => array(
+                                            'html',
+                                            'css'
+                                        )
+                                    ),
+                'bulgarasu' => array(
+                            'title' => 'Bulgarasu Ski School and Camp',
+                            'description' => 'Full featured website - user subscriptions, custom CMS, mailing system, online payments, special CMS for ski monitors. Full SEO service',
+                            'image' => 'Bulgarasu.ro.jpg',
+                            'url' => 'http://www.bulgarasu.ro/',
+                            'stack' => array(
+                                            'html',
+                                            'css',
+                                            'php',
+                                            'jquery',
+                                            'javascript',
+                                            'mysql'
+                                        )
+                                    ),
                 );
 print $Page;
 ?>
