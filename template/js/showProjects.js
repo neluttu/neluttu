@@ -3,6 +3,7 @@ let currentItem = 0; // iteration index
 let itemStep = 4; // how many boxes to show in one click
 
 loadButton.onclick = () => {
+    console.log(currentItem);
     let boxes = [...document.querySelectorAll('#projects .moreBox')];
     let totalBoxes = boxes.length;
 
@@ -17,8 +18,9 @@ loadButton.onclick = () => {
     
     if(currentItem + itemStep >= totalBoxes) {
         currentItem = currentItem + (totalBoxes - currentItem); // calculate remaining boxes
+        
         loadButton.style.display = 'none'; // hide show more button
     }
     else currentItem += itemStep; // show next boxes
-
+    console.log('numar box: ' + boxes.length);
 }

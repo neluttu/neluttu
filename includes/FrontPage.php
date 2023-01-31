@@ -2,20 +2,48 @@
 $Page = getTemplate('FrontPage');
 
 $Projects = array(
-                'aalr' => array(
-                            'title' => 'Asociația Artiștilor Lutieri din România',
-                            'description' => 'Design concept for a violin makers association, front-end and back-end. Members database with CMS for easy updates.',
-                            'image' => 'aalr.ro.png',
-                            'url' => 'https://www.aalr.ro/',
-                            'stack' => array(
-                                            'html',
-                                            'css',
-                                            'php',
-                                            'javascript',
-                                            'jquery',
-                                            'mysql'
-                                        )
-                                    ),
+            'bulgarasu' => array(
+                        'title' => 'Bulgarasu Ski School and Camp',
+                        'description' => 'Full featured website - user subscriptions, custom CMS, mailing system, online payments, special CMS for ski monitors. Full SEO service',
+                        'image' => 'Bulgarasu.ro.png',
+                        'url' => 'http://www.bulgarasu.ro/',
+                        'stack' => array(
+                                        'html',
+                                        'css',
+                                        'php',
+                                        'jquery',
+                                        'javascript',
+                                        'mysql'
+                                    )
+                                ),
+                'DietEthic' => array(
+                    'title' => 'DietEthic - medical nutrition therapy',
+                    'description' => 'Concept and design for a medical nutrition therapy office. Full SEO service.',
+                    'image' => 'DietEthic.ro.png',
+                    'url' => 'http://www.bulgarasu.ro/',
+                    'stack' => array(
+                                    'html',
+                                    'css',
+                                    'php',
+                                    'jquery',
+                                    'javascript',
+                                    'mysql'
+                                )
+                            ),
+                'HunterVipReghin' => array(
+                    'title' => 'Hunver VIP Reghin',
+                    'description' => 'Concept and design for a guest house, CMS for the online menu and client reservations included in the website.',
+                    'image' => 'HunterVipReghin.ro.png',
+                    'url' => 'http://www.huntervipreghin.ro/',
+                    'stack' => array(
+                                    'html',
+                                    'css',
+                                    'php',
+                                    'jquery',
+                                    'javascript',
+                                    'mysql'
+                                )
+                            ),
                 'aboutfood' => array(
                             'title' => 'aboutfood - online restaurants menus',
                             'description' => 'Personal project, mean to centralize all food menus in small cities. Complete user system with CMS for business registration.',
@@ -30,20 +58,6 @@ $Projects = array(
                                             'mysql'
                                             )
                                         ),
-                'bibliotecareghin' => array(
-                            'title' => 'Petru Maior - Public City Library',
-                            'description' => 'Concept and design for the city library, backed by a PHP driven CMS to edit dynamic pages. No frameworks involved.',
-                            'image' => 'BibliotecaReghin.ro.png',
-                            'url' => 'http://www.bibliotecareghin.ro/',
-                            'stack' => array(
-                                            'html',
-                                            'css',
-                                            'php',
-                                            'javascript',
-                                            'jquery',
-                                            'mysql'
-                                        )
-                                    ),
                 'blumprod' => array(
                             'title' => 'Blum Prod - thermoforming plastics',
                             'description' => 'Concept and design for a thermoforming company. Presentation page, multilanguage suport and full SEO service.',
@@ -57,6 +71,20 @@ $Projects = array(
                                             'jquery'
                                         )
                                     ),
+                'aalr' => array(
+                            'title' => 'Asociația Artiștilor Lutieri din România',
+                            'description' => 'Design concept for a violin makers association, front-end and back-end. Members database with CMS for easy updates.',
+                            'image' => 'Aalr.ro.png',
+                            'url' => 'https://www.aalr.ro/',
+                            'stack' => array(
+                                            'html',
+                                            'css',
+                                            'php',
+                                            'javascript',
+                                            'jquery',
+                                            'mysql'
+                                        )
+                                    ),
                 'blueskystudios' => array(
                             'title' => 'Bluesky Studios S.R.L.',
                             'description' => 'Simple one page presentation website for my company. No special effects there. ',
@@ -65,20 +93,6 @@ $Projects = array(
                             'stack' => array(
                                             'html',
                                             'css'
-                                        )
-                                    ),
-                'bulgarasu' => array(
-                            'title' => 'Bulgarasu Ski School and Camp',
-                            'description' => 'Full featured website - user subscriptions, custom CMS, mailing system, online payments, special CMS for ski monitors. Full SEO service',
-                            'image' => 'Bulgarasu.ro.png',
-                            'url' => 'http://www.bulgarasu.ro/',
-                            'stack' => array(
-                                            'html',
-                                            'css',
-                                            'php',
-                                            'jquery',
-                                            'javascript',
-                                            'mysql'
                                         )
                                     ),
                 'aces' => array(
@@ -91,39 +105,11 @@ $Projects = array(
                                             'css'
                                         )
                                     ),
-                'DietEthic' => array(
-                            'title' => 'DietEthic - medical nutrition therapy',
-                            'description' => 'Concept and design for a medical nutrition therapy office. Full SEO service.',
-                            'image' => 'DietEthic.ro.png',
-                            'url' => 'http://www.bulgarasu.ro/',
-                            'stack' => array(
-                                            'html',
-                                            'css',
-                                            'php',
-                                            'jquery',
-                                            'javascript',
-                                            'mysql'
-                                        )
-                                    ),
                 'dogmapub' => array(
                             'title' => 'DogmaPub - online menu',
                             'description' => 'Concept and design for a pub. Users can view on their mobile devices the pub\'s menu. CMS for easy price update, product edit / delete / add.',
                             'image' => 'DogmaPub.ro.png',
                             'url' => 'http://www.dogmapub.ro/',
-                            'stack' => array(
-                                            'html',
-                                            'css',
-                                            'php',
-                                            'jquery',
-                                            'javascript',
-                                            'mysql'
-                                        )
-                                    ),
-                'HunterVipReghin' => array(
-                            'title' => 'Hunver VIP Reghin',
-                            'description' => 'Concept and design for a guest house, CMS for the online menu and client reservations included in the website.',
-                            'image' => 'HunterVipReghin.ro.png',
-                            'url' => 'http://www.huntervipreghin.ro/',
                             'stack' => array(
                                             'html',
                                             'css',
@@ -188,7 +174,7 @@ $Projects = array(
                                         )
                                     ),
                 'Prosan' => array(
-                            'title' => 'ProSano',
+                            'title' => 'ProSano [outdated]',
                             'description' => 'Design and implementation of a snow shop - users can quick order fresh natural juice. All orders are email processed.',
                             'image' => 'Pro-Sano.ro.png',
                             'url' => '#',
@@ -200,8 +186,36 @@ $Projects = array(
                                             'javascript',
                                         )
                                     ),
+                'bibliotecareghin' => array(
+                            'title' => 'Petru Maior - Public City Library [outdated]',
+                            'description' => 'Concept and design for the city library, backed by a PHP driven CMS to edit dynamic pages. No frameworks involved.',
+                            'image' => 'BibliotecaReghin.ro.png',
+                            'url' => 'http://www.bibliotecareghin.ro/',
+                            'stack' => array(
+                                            'html',
+                                            'css',
+                                            'php',
+                                            'javascript',
+                                            'jquery',
+                                            'mysql'
+                                        )
+                                    ),
+                'bibliotecareghin' => array(
+                    'title' => 'Petru Maior - Public City Library [outdated]',
+                    'description' => 'Concept and design for the city library, backed by a PHP driven CMS to edit dynamic pages. No frameworks involved.',
+                    'image' => 'BibliotecaReghin.ro.png',
+                    'url' => 'http://www.bibliotecareghin.ro/',
+                    'stack' => array(
+                                    'html',
+                                    'css',
+                                    'php',
+                                    'javascript',
+                                    'jquery',
+                                    'mysql'
+                                )
+                            ),
                 'StrindBerg' => array(
-                            'title' => 'Strindberg - winter sportswear',
+                            'title' => 'Strindberg - winter sportswear [outdated]',
                             'description' => 'Design and implementation of a an online shop where users can buy winter sportswear. CMS for managing orders and products.',
                             'image' => 'Strindberg.ro.png',
                             'url' => '#',
@@ -217,7 +231,7 @@ $Projects = array(
                 'UsersPage' => array(
                             'title' => 'CSS project - users page',
                             'description' => 'Designed this with pure HTML, CSS and JavaScript just for fun and future use.',
-                            'image' => 'Users_page.ro.png',
+                            'image' => 'Users_page.png',
                             'url' => '#',
                             'stack' => array(
                                             'html',
@@ -241,7 +255,7 @@ $Projects = array(
                                         )
                                     ),
                 'iNotes' => array(
-                            'title' => 'Personal WordPress Blog',
+                            'title' => 'Personal WordPress Blog [outdated]',
                             'description' => 'Designed a theme for the wordpress platform; a personal blog that no longer exists.',
                             'image' => 'iNotes.ro.png',
                             'url' => '#',
@@ -254,20 +268,28 @@ $Projects = array(
                                             'mysql'
                                         )
                                     ),
-                'pokeraces' => array(
-                            'title' => 'CSS project - Poker Aces',
-                            'description' => 'Saw this challange somewhere and decided to code the four aces in HTML and CSS.',
-                            'image' => 'Users_page.ro.png',
-                            'url' => '#',
-                            'stack' => array(
-                                            'html',
-                                            'css',
-                                            'jquery',
-                                            'javascript',
-                                            'php',
-                                            'mysql'
-                                        )
-                                    ),
                 );
+$Counter = 1;                
+foreach($Projects as $key => $Project)
+{
+    $Projectz .= getTemplate('Project');
+
+    $Projectz = str_replace('[-TITLE-]',$Project['title'],$Projectz);
+    $Projectz = str_replace('[-ID-]',$key,$Projectz);
+    $Projectz = str_replace('[-DESCRIPTION-]',$Project['description'],$Projectz);
+    $Projectz = str_replace('[-IMAGE-]',$Project['image'],$Projectz);
+
+    foreach($Project['stack'] as $Stack) {
+        $StackList .= '<span class="'.$Stack.'"></span>&nbsp;';
+    }
+
+    $Projectz = str_replace('[-STACK-]',$StackList,$Projectz);
+    if($Counter > 4)
+        $Projectz = str_replace('class="row" id="'.$key.'"','class="row moreBox" id="'.$key.'"',$Projectz);
+
+    $StackList = '';
+    $Counter++;
+}
+$Page = str_replace('[-PROJECTS-]',$Projectz,$Page);
 print $Page;
 ?>

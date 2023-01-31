@@ -1,5 +1,6 @@
 <?
 session_start();
+error_reporting( error_reporting() & ~E_NOTICE );
 
 
 include('includes/functions.php');
