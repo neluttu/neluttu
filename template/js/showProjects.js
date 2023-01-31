@@ -6,6 +6,7 @@ loadButton.onclick = () => {
     console.log(currentItem);
     let boxes = [...document.querySelectorAll('#projects .moreBox')];
     let totalBoxes = boxes.length;
+    console.log('DIV-uri:' + totalBoxes);
 
     if(currentItem + itemStep > totalBoxes) var showMore = currentItem + (totalBoxes - currentItem); // show only remaining boxes.
     else var showMore = currentItem + itemStep; // show next boxes
@@ -22,5 +23,5 @@ loadButton.onclick = () => {
         loadButton.style.display = 'none'; // hide show more button
     }
     else currentItem += itemStep; // show next boxes
-    console.log('numar box: ' + boxes.length);
+
 }
