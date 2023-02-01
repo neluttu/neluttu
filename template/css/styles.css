@@ -166,6 +166,12 @@ span.seo::before {
     display: none;
 }
 
+.project img {
+    object-fit: cover; 
+    box-shadow:0 1px 31px rgba(0,0,0,.09); 
+    border-radius: 5px;
+}
+
 #load-more {
     width: 96%;
     margin: auto;
