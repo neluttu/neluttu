@@ -117,81 +117,6 @@
     </div>
 </div>
 <div class="content">
-    <style type="text/css">
-        img {
-            margin-top: 20px;
-            display: none;
-            border:1px solid red; padding: 20px; margin-right:10px;
-            width: 100px;
-            height: 100px;
-        }
-
-        .btn {
-            display: block;
-            margin: 30px auto 0 auto;
-        }
-    </style>
-    <script>
-$("img:lt(4)").show();
-
-// When the gallery button is clicked
-$("#gallery-btn").on('click', function(event) {
-  // Prevent default behavior
-  event.preventDefault();
-  // All of the hidden images
-  var $hidden = $("img:hidden");
-  // Show the next four images
-  $($hidden).slice(0, 4).fadeIn(800);
-  // If the length of $hidden is 4 then hide the button
-  if ($hidden.length == 4) {
-    $(this).fadeOut();
-  }
-});
-    </script>
-<div class="container">
-    <div id="image-gallery">
-      <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <img src="https://unsplash.it/700" alt="Image" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <img src="https://unsplash.it/750" alt="Image" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <img src="https://unsplash.it/800" alt="Image" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <img src="https://unsplash.it/850" alt="Image" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <img src="https://unsplash.it/900" alt="Image" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <img src="https://unsplash.it/950" alt="Image" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <img src="https://unsplash.it/1000" alt="Image" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <img src="https://unsplash.it/1050" alt="Image" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <img src="https://unsplash.it/1100" alt="Image" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <img src="https://unsplash.it/1150" alt="Image" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <img src="https://unsplash.it/1200" alt="Image" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <img src="https://unsplash.it/1250" alt="Image" class="img-fluid">
-        </div>
-      </div><!-- End row -->
-      <button type="button" class="btn btn-primary" id="gallery-btn">Show More</button>
-    </div><!-- End image gallery -->
-  </div><!-- End container -->
-    
     <div class="row">
         <div class="col m6">
             <h1 style="font-size: 32px; font-weight: 600; letter-spacing: normal; margin: 0;">Employment</h1>
@@ -426,12 +351,20 @@ $("#gallery-btn").on('click', function(event) {
 
                        
     <br><br>
-    <!-- begin portfolio -->
     <div id="projects">
         [-PROJECTS-]
     </div>
-        <div id="load-more">loadMoreProjects();</div>
-        <script src="template/js/showProjects.js"></script>
+    <div id="load-more">loadMoreProjects();</div>
+    <script>
+        let nextProjects = 4;
+        $(".project:lt("+ nextProjects +")").show();
+        $("#load-more").on('click', function (event) {
+            event.preventDefault();
+            var $hidden = $(".project:hidden");
+            $($hidden).slice(0, nextProjects).fadeIn(800);
+            if ($hidden.length < 4 ) $(this).fadeOut();
+        });
+    </script>
 
     </div>
     <!-- end portfolio -->

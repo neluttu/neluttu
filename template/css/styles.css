@@ -161,12 +161,9 @@ span.seo::before {
     border-radius: 5px;
     content: 'SEO';
 }        
-.moreBox {
-    display: none;
-}
 
-.moreBoxShow {
-    display: block;
+.project {
+    display: none;
 }
 
 #load-more {
