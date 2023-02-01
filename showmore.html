@@ -1,0 +1,88 @@
+<html lang="en"><head>
+
+  <meta charset="UTF-8">
+  <title>CodePen - Show More Image Gallery</title>
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>  
+<style>
+.coolerer {
+  display: block; 
+}
+.cooler {
+  display: none;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+.btn {
+  display: block;
+  margin: 30px auto 0 auto;
+}
+</style>
+
+</head>
+
+<body translate="no">
+
+      <div class="coolerer">
+        <div class="cooler"><img src="https://unsplash.it/700"></div>
+      </div>
+      <div class="coolerer">
+        <div class="cooler"><img src="https://unsplash.it/700"></div>
+      </div>
+      <div class="coolerer">
+        <div class="cooler"><img src="https://unsplash.it/700"></div>
+      </div>
+      <div class="coolerer">
+        <div class="cooler"><img src="https://unsplash.it/700"></div>
+      </div>
+      <div class="coolerer">
+        <div class="cooler"><img src="https://unsplash.it/700"></div>
+      </div>
+      <div class="coolerer">
+        <div class="cooler"><img src="https://unsplash.it/700"></div>
+      </div>
+      <div class="coolerer">
+        <div class="cooler"><img src="https://unsplash.it/700"></div>
+      </div>
+      <div class="coolerer">
+        <div class="cooler"><img src="https://unsplash.it/700"></div>
+      </div>
+      <div class="coolerer">
+        <div class="cooler"><img src="https://unsplash.it/700"></div>
+      </div>
+      <div class="coolerer">
+        <div class="cooler"><img src="https://unsplash.it/700"></div>
+      </div>
+      <div class="coolerer">
+        <div class="cooler"><img src="https://unsplash.it/700"></div>
+      </div>
+      <button type="button" class="btn btn-primary" id="gallery-btn">Show More</button>
+
+
+      <script>
+        // Show the first four images
+        $(".cooler:lt(4)").show();
+
+        // When the gallery button is clicked
+        $("#gallery-btn").on('click', function (event) {
+          event.preventDefault();
+          // All of the hidden divs
+          var $hidden = $(".cooler:hidden");
+
+          // Show the next four images
+          $($hidden).slice(0, 4).fadeIn(800);
+
+          // If the length of $hidden is 4 then hide the button
+          if ($hidden.length < 4 ) $(this).fadeOut();
+        });
+    </script>
+
+  
+
+
+
+
+ 
+</body></html>

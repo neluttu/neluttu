@@ -3,8 +3,7 @@ let currentItem = 0; // iteration index
 let itemStep = 4; // how many boxes to show in one click
 
 loadButton.onclick = () => {
-    console.log(currentItem);
-    let boxes = [...document.querySelectorAll('#projects .moreBox')];
+    let boxes = [...document.querySelectorAll('.moreBox')];
     let totalBoxes = boxes.length;
     console.log('DIV-uri:' + totalBoxes);
 
