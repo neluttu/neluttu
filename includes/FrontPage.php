@@ -97,7 +97,7 @@ $Projects = array(
                                     ),
                 'aces' => array(
                             'title' => 'Poker Aces - CSS Project',
-                            'description' => 'A simple page with the for poker ace cards. All coded in CSS and HTML',
+                            'description' => 'A simple page with the four poker ace cards. All coded in CSS and HTML',
                             'image' => 'CSS - Poker Aces.png',
                             'url' => 'http://www.bulgarasu.ro/',
                             'stack' => array(
@@ -121,7 +121,7 @@ $Projects = array(
                                     ),
                 'IncaltamintePiele' => array(
                             'title' => 'Regsan - Shoes shop',
-                            'description' => 'Concept and design a direct from factory shoe show. Users can send a quick order. CMS for viewing orders, updating their statuses, client email notifications etc.',
+                            'description' => 'Concept and design a direct from factory shoe shop. Users can send a quick order. CMS for viewing orders, updating their statuses, client email notifications etc.',
                             'image' => 'IncaltamintePiele.ro.png',
                             'url' => 'http://www.huntervipreghin.ro/',
                             'stack' => array(
