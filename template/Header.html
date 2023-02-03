@@ -29,7 +29,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-        <link href="template/css/styles.css" rel="stylesheet" media="all">
+        <link href="template/css/styles.css?ver=[-MT-]" rel="stylesheet" media="all">
         <script src="template/js/inView.js"></script>
     </head>
     <body>
@@ -71,9 +71,9 @@
                         #menu > div:first-of-type a:hover {
                             color: #661616;
                         }
-        
+                        
                         #me {
-                            display: block;
+                            display: none;
                             padding: 20px;
                             border-bottom-left-radius: 4px; 
                             border-bottom-right-radius: 4px;
@@ -105,7 +105,7 @@
                             color: white; 
                             padding: 10px;
                         }
-                        input[type=submit], input[type=submit]:hover {
+                        input[type=submit], input[type=submit]:hover, input[type=submit]:focus {
                             font-weight: 200;
                             background: transparent; 
                             font-weight: 400; 
@@ -133,6 +133,20 @@
                             color: white; 
                             padding: 10px;
                         }
+
+                        #formValidMessage {
+                            color:white;
+                            padding: 0px 10px;
+                            font-size: 15px;
+                        }
+
+                        .formErrorMessage {
+                            display: inline-block;
+                            color: white;
+                            padding-left: 30px;
+                            font-size: 15px;
+                            font-weight: 200;
+                        }
                     </style>
                     <div id="menu">
                         <div>
@@ -141,49 +155,87 @@
                             <a href="#" id="about">contact</a>
                         </div>
                         <div>
-                            <div class="row" id="me">
-                                <div class="col m6">
-                                    <input type="text" placeholder="Your name">
+                            <form name="contactMe" id="contactMe" method="post" action="includes/SendContact.php">
+                                <input type="hidden" name="action" value="sendContact">
+                                <div class="row" id="me">
+                                    <div class="col m6">
+                                        <input type="text" name="Name" placeholder="Your name" required>
+                                    </div>
+                                    <div class="col m6">
+                                        <input type="text" name="Email" placeholder="Your email address" required>
+                                    </div>
+                                    <div class="col m12">
+                                        <textarea placeholder="Your message" name="Message" required></textarea>
+                                        <br><br>
+                                        <input type="submit" value="Send it"> <div class="formErrorMessage"></div>
+                                    </div>
+                                    <script>
+                                        $(function() {
+                                            var form = $('#contactMe');
+                                            var formValid = $('#formValidMessage');
+                                            var formError = $('.formErrorMessage');
+                                    
+                                            $(form).submit(function(event) {
+                                                event.preventDefault();
+                                    
+                                                var formData = $(form).serialize();
+                                    
+                                                $.ajax({
+                                                    type: 'POST',
+                                                    url: $(form).attr('action'),
+                                                    data: formData
+                                                }).done(function(response) {
+                                    
+                                                    $(formValid).text(response);
+                                    
+                                                    $('#me').slideToggle();
+                                                    $(form).trigger("reset");
+                                                    $('#formValidMessage').slideToggle();
+
+                                                }).fail(function(data) {
+                                                    if (data.responseText !== '')
+                                                        $(formError).text(data.responseText);
+                                                    else 
+                                                        $(formError).text('Something went wrong... :-(');
+                                                });            
+                                            });
+                                        });
+                                    </script>                                
                                 </div>
-                                <div class="col m6">
-                                    <input type="text" placeholder="Your email address">
-                                </div>
-                                <div class="col m12">
-                                    <textarea placeholder="Your message"></textarea>
-                                    <br>
-                                    <input type="submit" value="Send now">
-                                </div>
-                            </div>
+                                <div id="formValidMessage"></div>
+                            </form>
                         </div>
-                        <script>
-                            $(document).ready(function() {
-                                $('#me').hide();
-                                $("#about").click(function() {
-                                    $('#me').slideToggle();
-                                });
-                            });                            
+                        <script> 
+                            $(document).ready(function() { 
+                                $("#about").click(function() { 
+                                    $('#me').slideToggle(); 
+                                    $('#formValidMessage').slideToggle();
+                                }); 
+                            }); 
                         </script>
                     </div>
                     <br>
-                    <a href="https://www.linkedin.com/in/ionel-olariu-b468a7106/" target="_blank" title="LinkedIn Profile Ionel Olariu"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <rect x="4" y="4" width="16" height="16" rx="2" />
-                        <line x1="8" y1="11" x2="8" y2="16" />
-                        <line x1="8" y1="8" x2="8" y2="8.01" />
-                        <line x1="12" y1="16" x2="12" y2="11" />
-                        <path d="M16 16v-3a2 2 0 0 0 -4 0" />
-                      </svg>
-                    </a>
-                    <a href="https://www.github.com/neluttu/" target="_blank" title="GitHub Neluttu"><svg xmlns="http://www.w3.org/2000/svg" style="float: right; margin-right:10px" class="icon icon-tabler icon-tabler-brand-github" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd5000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-                      </svg>
-                    </a>
-                    <a href="https://www.twitter.com/neluttu/" target="_blank" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg"  style="float: right; margin-right:10px" class="icon icon-tabler icon-tabler-brand-twitter" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd5000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
-                    </svg>
-                    </a>
+                    <div class="_alignRight">
+                        <a href="https://www.linkedin.com/in/ionel-olariu-b468a7106/" target="_blank" title="LinkedIn Profile Ionel Olariu"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <rect x="4" y="4" width="16" height="16" rx="2" />
+                            <line x1="8" y1="11" x2="8" y2="16" />
+                            <line x1="8" y1="8" x2="8" y2="8.01" />
+                            <line x1="12" y1="16" x2="12" y2="11" />
+                            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+                        </svg>
+                        </a>
+                        <a href="https://www.github.com/neluttu/" target="_blank" title="GitHub Neluttu"><svg xmlns="http://www.w3.org/2000/svg" style="float: right; margin-right:10px" class="icon icon-tabler icon-tabler-brand-github" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd5000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                        </svg>
+                        </a>
+                        <a href="https://www.twitter.com/neluttu/" target="_blank" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg"  style="float: right; margin-right:10px" class="icon icon-tabler icon-tabler-brand-twitter" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd5000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+                        </svg>
+                        </a>
+                    </div>
                 </div>
                 <div class="col m12" style="font-size: 36px; font-weight: 500; color: black;">
                     <div class="helloText">

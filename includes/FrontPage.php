@@ -95,14 +95,18 @@ $Projects = array(
                                             'css'
                                         )
                                     ),
-                'aces' => array(
-                            'title' => 'Poker Aces - CSS Project',
-                            'description' => 'A simple page with the four poker ace cards. All coded in CSS and HTML',
-                            'image' => 'CSS - Poker Aces.png',
-                            'url' => 'http://www.bulgarasu.ro/',
+                'IncaltamintePiele' => array(
+                            'title' => 'Regsan - Shoes shop',
+                            'description' => 'Concept and design a direct from factory shoe shop. Users can send a quick order. CMS for viewing orders, updating their statuses, client email notifications etc.',
+                            'image' => 'IncaltamintePiele.ro.png',
+                            'url' => 'http://www.huntervipreghin.ro/',
                             'stack' => array(
                                             'html',
-                                            'css'
+                                            'css',
+                                            'php',
+                                            'jquery',
+                                            'javascript',
+                                            'mysql'
                                         )
                                     ),
                 'dogmapub' => array(
@@ -119,38 +123,11 @@ $Projects = array(
                                             'mysql'
                                         )
                                     ),
-                'IncaltamintePiele' => array(
-                            'title' => 'Regsan - Shoes shop',
-                            'description' => 'Concept and design a direct from factory shoe shop. Users can send a quick order. CMS for viewing orders, updating their statuses, client email notifications etc.',
-                            'image' => 'IncaltamintePiele.ro.png',
-                            'url' => 'http://www.huntervipreghin.ro/',
-                            'stack' => array(
-                                            'html',
-                                            'css',
-                                            'php',
-                                            'jquery',
-                                            'javascript',
-                                            'mysql'
-                                        )
-                                    ),
                 'MareAurelian' => array(
                             'title' => 'Mare Aurelian - violin maker',
                             'description' => 'Presentation website for Mare Aurelian, violin maker. Design and impementation.',
                             'image' => 'MareAurelian.ro.png',
                             'url' => 'http://www.mareaurelian.ro/',
-                            'stack' => array(
-                                            'html',
-                                            'css',
-                                            'php',
-                                            'jquery',
-                                            'javascript',
-                                        )
-                                    ),
-                'NBMed' => array(
-                            'title' => 'NBmed - private clinic',
-                            'description' => 'Presentation of a private medical clinic. Static website',
-                            'image' => 'NBMed.ro.png',
-                            'url' => '#',
                             'stack' => array(
                                             'html',
                                             'css',
@@ -200,18 +177,17 @@ $Projects = array(
                                             'mysql'
                                         )
                                     ),
-                'bibliotecareghin' => array(
-                    'title' => 'Petru Maior - Public City Library [outdated]',
-                    'description' => 'Concept and design for the city library, backed by a PHP driven CMS to edit dynamic pages. No frameworks involved.',
-                    'image' => 'BibliotecaReghin.ro.png',
-                    'url' => 'http://www.bibliotecareghin.ro/',
+                'NBMed' => array(
+                    'title' => 'NBmed - private clinic',
+                    'description' => 'Presentation of a private medical clinic. Static website',
+                    'image' => 'NBMed.ro.png',
+                    'url' => '#',
                     'stack' => array(
                                     'html',
                                     'css',
                                     'php',
-                                    'javascript',
                                     'jquery',
-                                    'mysql'
+                                    'javascript',
                                 )
                             ),
                 'StrindBerg' => array(
@@ -268,6 +244,16 @@ $Projects = array(
                                             'mysql'
                                         )
                                     ),
+                'aces' => array(
+                    'title' => 'Poker Aces - CSS Project',
+                    'description' => 'A simple page with the four poker ace cards. All coded in CSS and HTML',
+                    'image' => 'CSS - Poker Aces.png',
+                    'url' => 'http://www.bulgarasu.ro/',
+                    'stack' => array(
+                                    'html',
+                                    'css'
+                                )
+                            ),
                 );
 $Counter = 1;                
 foreach($Projects as $key => $Project)
