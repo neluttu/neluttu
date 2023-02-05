@@ -206,7 +206,7 @@ $Projects = array(
                                     ),
                 'UsersPage' => array(
                             'title' => 'CSS project - users page',
-                            'description' => 'Designed this with pure HTML, CSS and JavaScript just for fun and future use.',
+                            'description' => 'Designed this with pure HTML, CSS and JavaScript for the <a href="https://www.twitter.com/icodethis" target="_blank">@icodethis</a> challange.',
                             'image' => 'Users_page.png',
                             'url' => '#',
                             'stack' => array(

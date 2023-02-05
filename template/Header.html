@@ -57,6 +57,9 @@
                             border-bottom-left-radius: 4px; 
                             border-bottom-right-radius: 4px;
                             overflow: hidden;
+                            background: linear-gradient(-45deg, #700000, #d10909, #441111, #690f0f);
+	                        background-size: 400% 400%;
+	                        animation: gradient 15s ease infinite;                            
                         }
         
                         #menu > div:first-of-type a, #menu > div:first-of-type a:visited {
@@ -78,6 +81,17 @@
                             border-bottom-left-radius: 4px; 
                             border-bottom-right-radius: 4px;
                         }
+                        @keyframes gradient {
+                            0% {
+                                background-position: 0% 50%;
+                            }
+                            50% {
+                                background-position: 100% 50%;
+                            }
+                            100% {
+                                background-position: 0% 50%;
+                            }
+                        }
                         svg {
                             float: right; 
                             margin-right:10px;
@@ -92,7 +106,7 @@
                             font-size: 16px;
                             color: white;
                         }
-                        input[type=text] {
+                        input[type=text], input[type='email'] {
                             font-weight: 200;
                             width: 96%;
                             background: transparent; 
@@ -159,13 +173,13 @@
                                 <input type="hidden" name="action" value="sendContact">
                                 <div class="row" id="me">
                                     <div class="col m6">
-                                        <input type="text" name="Name" placeholder="Your name" required>
+                                        <input type="text" name="Name" placeholder="Your name," required>
                                     </div>
                                     <div class="col m6">
-                                        <input type="text" name="Email" placeholder="Your email address" required>
+                                        <input type="email" name="Email" placeholder="email address," required>
                                     </div>
                                     <div class="col m12">
-                                        <textarea placeholder="Your message" name="Message" required></textarea>
+                                        <textarea placeholder="message" name="Message" required></textarea>
                                         <br><br>
                                         <input type="submit" value="Send it"> <div class="formErrorMessage"></div>
                                     </div>
