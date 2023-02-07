@@ -58,6 +58,18 @@ $Projects = array(
                                             'mysql'
                                             )
                                         ),
+                'music_player' => array(
+                            'title' => 'HTML, CSS and JavaScript music player',
+                            'description' => 'Fun project for @iCodeThis daily challange. Fully functional music player (mp3 files).',
+                            'image' => 'music_player_icodethis.png',
+                            'url' => 'https://www.icodethis.com/submissions/2170',
+                            'stack' => array(
+                                            'html',
+                                            'css',
+                                            'javascript',
+                                            'jquery'
+                                            )
+                                        ),
                 'blumprod' => array(
                             'title' => 'Blum Prod - thermoforming plastics',
                             'description' => 'Concept and design for a thermoforming company. Presentation page, multilanguage suport and full SEO service.',
